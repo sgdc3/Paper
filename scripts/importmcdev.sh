@@ -70,11 +70,15 @@ import EntityTypes
 import EntityWaterAnimal
 import EnumItemSlot
 import EULA
+import EnumDirection
+import EnumSkyBlock
 import FileIOThread
+import IBlockProperties
 import IHopper
 import ItemBlock
 import ItemFireworks
 import ItemMonsterEgg
+import MathHelper
 import NavigationAbstract
 import NBTTagCompound
 import NBTTagList
