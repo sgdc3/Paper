@@ -1,4 +1,4 @@
-From 4756610ec863cc75f8e66891aaf6f0f2257afb23 Mon Sep 17 00:00:00 2001
+From d90869ceb05504fed2f399afc37a25f01170eafd Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Tue, 19 Dec 2017 22:57:26 -0500
 Subject: [PATCH] ExperienceOrbMergeEvent
@@ -8,10 +8,10 @@ Plugins can cancel this if they want to ensure experience orbs do not lose impor
 metadata such as spawn reason, or conditionally move data from source to target.
 
 diff --git a/src/main/java/net/minecraft/server/World.java b/src/main/java/net/minecraft/server/World.java
-index eb8a1c43c..ad927cbd5 100644
+index d2371c377..d625d0665 100644
 --- a/src/main/java/net/minecraft/server/World.java
 +++ b/src/main/java/net/minecraft/server/World.java
-@@ -1153,7 +1153,7 @@ public abstract class World implements IBlockAccess {
+@@ -1170,7 +1170,7 @@ public abstract class World implements IBlockAccess {
                  for (Entity e : entities) {
                      if (e instanceof EntityExperienceOrb) {
                          EntityExperienceOrb loopItem = (EntityExperienceOrb) e;

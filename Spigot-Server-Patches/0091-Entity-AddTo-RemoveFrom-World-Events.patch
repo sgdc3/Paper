@@ -1,0 +1,29 @@
+From 2722b6a8cbe136a073c295a1f9e76de931c194a1 Mon Sep 17 00:00:00 2001
+From: Aikar <aikar@aikar.co>
+Date: Mon, 28 Mar 2016 20:32:58 -0400
+Subject: [PATCH] Entity AddTo/RemoveFrom World Events
+
+
+diff --git a/src/main/java/net/minecraft/server/World.java b/src/main/java/net/minecraft/server/World.java
+index 6c0684132..36fb172a9 100644
+--- a/src/main/java/net/minecraft/server/World.java
++++ b/src/main/java/net/minecraft/server/World.java
+@@ -1185,6 +1185,7 @@ public abstract class World implements IBlockAccess {
+         }
+ 
+         entity.valid = true; // CraftBukkit
++        new com.destroystokyo.paper.event.entity.EntityAddToWorldEvent(entity.getBukkitEntity()).callEvent(); // Paper - fire while valid
+     }
+ 
+     protected void c(Entity entity) {
+@@ -1192,6 +1193,7 @@ public abstract class World implements IBlockAccess {
+             ((IWorldAccess) this.u.get(i)).b(entity);
+         }
+ 
++        new com.destroystokyo.paper.event.entity.EntityRemoveFromWorldEvent(entity.getBukkitEntity()).callEvent(); // Paper - fire while valid
+         entity.valid = false; // CraftBukkit
+     }
+ 
+-- 
+2.15.1
+
