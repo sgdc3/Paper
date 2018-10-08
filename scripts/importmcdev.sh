@@ -89,6 +89,7 @@ import LotoSelectorEntry
 import NavigationAbstract
 import NBTTagCompound
 import NBTTagList
+import NextTickListEntry
 import PacketPlayInUseEntity
 import PacketPlayOutMapChunk
 import PacketPlayOutPlayerListHeaderFooter

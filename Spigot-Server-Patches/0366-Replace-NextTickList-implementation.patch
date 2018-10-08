@@ -1,0 +1,170 @@
+From c354a042309d169689478f4df3ecb0c4d2dea240 Mon Sep 17 00:00:00 2001
+From: Shane Freeder <theboyetronic@gmail.com>
+Date: Sat, 16 Jun 2018 05:26:41 +0100
+Subject: [PATCH] Replace NextTickList implementation
+
+Vanilla uses a set and a sorted map in order to prioritize the order
+of blocks being ticked in the world and provide fast lookup, the problem 
+here is that vanilla will, in some cases, attempt to reschedule a block 
+for work, and while by equals will tolerate this, the comparator used in 
+NextTickListEntry will never equal 0 for such tasks, meaning that any collection 
+which attempts to optimize searching its bins using the caparator will fail to 
+find the existing value, causing desyncronization between these two collections.
+
+We attempt to solve this by reusing the older tick list entry when attempting
+to remove any older values. This patch is intended to be as lighetweight
+as possible, while still supporting anything that may be attempting to access
+this list using reflection.
+
+diff --git a/src/main/java/com/destroystokyo/paper/util/NextTickList.java b/src/main/java/com/destroystokyo/paper/util/NextTickList.java
+new file mode 100644
+index 0000000000..e602e2a4d8
+--- /dev/null
++++ b/src/main/java/com/destroystokyo/paper/util/NextTickList.java
+@@ -0,0 +1,85 @@
++package com.destroystokyo.paper.util;
++
++import net.minecraft.server.BlockPosition;
++import net.minecraft.server.NextTickListEntry;
++
++import org.bukkit.craftbukkit.util.HashTreeSet;
++
++import java.util.HashMap;
++import java.util.Iterator;
++import java.util.Map;
++
++import javax.annotation.Nonnull;
++
++public class NextTickList extends HashTreeSet<NextTickListEntry> {
++
++    private Map<BlockPosition, NextTickListEntry> entries = new HashMap<>();
++
++    @Override
++    public boolean contains(Object entry) {
++        return entries.get(((NextTickListEntry)entry).getPos()) != null;
++    }
++
++    public void addIfNotPresent(NextTickListEntry entry) {
++        if (!contains(entry)) {
++            entries.put(entry.getPos(), entry);
++            super.add(entry);
++        }
++    }
++
++    @Override
++    public boolean add(NextTickListEntry entry) {
++        boolean removed = false;
++        NextTickListEntry currentEntry = entries.get(entry.getPos());
++        // We have to remove the existing entry first, otherwise we risk stuff falling out of place
++        if (currentEntry != null) {
++            super.remove(currentEntry);
++            removed = true;
++        }
++
++        entries.put(entry.getPos(), entry);
++        super.add(entry);
++        return removed;
++    }
++
++    @Override
++    public boolean remove(Object o) {
++        NextTickListEntry removalEntry = (NextTickListEntry) o;
++        NextTickListEntry toRemove = entries.remove(removalEntry.getPos());
++
++        if (toRemove != null) {
++            super.remove(toRemove);
++            return true;
++        }
++
++        return false;
++    }
++
++    @Override
++    @Nonnull
++    public Iterator<NextTickListEntry> iterator() {
++        // get this here, that way we can pass it in
++        Iterator<NextTickListEntry> superIterator = super.iterator();
++
++        return new Iterator<NextTickListEntry>() {
++            Iterator<NextTickListEntry> iterator = superIterator;
++            NextTickListEntry current;
++
++            @Override
++            public boolean hasNext() {
++                return iterator.hasNext();
++            }
++
++            @Override
++            public NextTickListEntry next() {
++                return current = iterator.next();
++            }
++
++            @Override
++            public void remove() {
++                entries.remove(current.getPos());
++                iterator.remove();
++            }
++        };
++    }
++}
+diff --git a/src/main/java/net/minecraft/server/NextTickListEntry.java b/src/main/java/net/minecraft/server/NextTickListEntry.java
+index 565a0ca6e5..0e0feb4d06 100644
+--- a/src/main/java/net/minecraft/server/NextTickListEntry.java
++++ b/src/main/java/net/minecraft/server/NextTickListEntry.java
+@@ -4,7 +4,8 @@ public class NextTickListEntry implements Comparable<NextTickListEntry> {
+ 
+     private static long d;
+     private final Block e;
+-    public final BlockPosition a;
++    public final BlockPosition a; public BlockPosition getPos() { return a; } // Paper - OBFHELPER
++
+     public long b;
+     public int c;
+     private final long f;
+@@ -50,7 +51,7 @@ public class NextTickListEntry implements Comparable<NextTickListEntry> {
+         return this.e;
+     }
+ 
+-    public int compareTo(Object object) {
++    public int compareTo(NextTickListEntry object) { // Paper - decompiler fix
+         return this.a((NextTickListEntry) object);
+     }
+ }
+diff --git a/src/main/java/net/minecraft/server/WorldServer.java b/src/main/java/net/minecraft/server/WorldServer.java
+index b19942e0f1..c0cd174a4f 100644
+--- a/src/main/java/net/minecraft/server/WorldServer.java
++++ b/src/main/java/net/minecraft/server/WorldServer.java
+@@ -41,7 +41,7 @@ public class WorldServer extends World implements IAsyncTaskHandler {
+     public EntityTracker tracker;
+     private final PlayerChunkMap manager;
+     // private final Set<NextTickListEntry> nextTickListHash = Sets.newHashSet();
+-    private final HashTreeSet<NextTickListEntry> nextTickList = new HashTreeSet<NextTickListEntry>(); // CraftBukkit - HashTreeSet
++    private final com.destroystokyo.paper.util.NextTickList nextTickList = new com.destroystokyo.paper.util.NextTickList(); // CraftBukkit - HashTreeSet // Paper - NextTickList
+     public final Map<UUID, Entity> entitiesByUUID = Maps.newHashMap(); // Paper
+     public boolean savingDisabled;
+     private boolean Q;
+@@ -646,8 +646,8 @@ public class WorldServer extends World implements IAsyncTaskHandler {
+             }
+ 
+             // CraftBukkit - use nextTickList
+-            if (!this.nextTickList.contains(nextticklistentry)) {
+-                this.nextTickList.add(nextticklistentry);
++            if (true) { // Paper - use NextTickList
++                this.nextTickList.addIfNotPresent(nextticklistentry);
+             }
+         }
+ 
+@@ -664,8 +664,8 @@ public class WorldServer extends World implements IAsyncTaskHandler {
+         }
+ 
+         // CraftBukkit - use nextTickList
+-        if (!this.nextTickList.contains(nextticklistentry)) {
+-            this.nextTickList.add(nextticklistentry);
++        if (true) { // Paper - use NextTickList
++            this.nextTickList.addIfNotPresent(nextticklistentry); // Paper - use NextTickList
+         }
+ 
+     }
+-- 
+2.19.1
+
