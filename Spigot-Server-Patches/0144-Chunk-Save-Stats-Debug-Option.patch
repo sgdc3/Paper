@@ -1,4 +1,3 @@
-From 7ac07ac07ac07ac07ac07ac07ac07ac07ac07ac0 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Fri, 4 Nov 2016 02:12:10 -0400
 Subject: [PATCH] Chunk Save Stats Debug Option
@@ -8,7 +7,6 @@ Adds a command line flag to enable stats on how chunk saves are processing.
 Stats on current queue, how many was processed and how many were queued.
 
 diff --git a/src/main/java/net/minecraft/server/ChunkProviderServer.java b/src/main/java/net/minecraft/server/ChunkProviderServer.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/ChunkProviderServer.java
 +++ b/src/main/java/net/minecraft/server/ChunkProviderServer.java
 @@ -30,6 +30,11 @@ public class ChunkProviderServer implements IChunkProvider {
@@ -54,7 +52,6 @@ index 7ac07ac07ac0..7ac07ac07ac0 100644
                  return false;
              }
 diff --git a/src/main/java/net/minecraft/server/ChunkRegionLoader.java b/src/main/java/net/minecraft/server/ChunkRegionLoader.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/ChunkRegionLoader.java
 +++ b/src/main/java/net/minecraft/server/ChunkRegionLoader.java
 @@ -152,7 +152,13 @@ public class ChunkRegionLoader implements IChunkLoader, IAsyncChunkSaver {

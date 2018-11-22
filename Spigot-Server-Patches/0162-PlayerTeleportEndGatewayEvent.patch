@@ -1,4 +1,3 @@
-From f8d41615a68e7ccdf94eff4ab5fe3d84ebb58149 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Sat, 31 Dec 2016 21:44:50 -0500
 Subject: [PATCH] PlayerTeleportEndGatewayEvent
@@ -6,7 +5,6 @@ Subject: [PATCH] PlayerTeleportEndGatewayEvent
 Allows you to access the Gateway being used in a teleport event
 
 diff --git a/src/main/java/net/minecraft/server/TileEntityEndGateway.java b/src/main/java/net/minecraft/server/TileEntityEndGateway.java
-index 2a17115ac6..b36dcb4d7d 100644
 --- a/src/main/java/net/minecraft/server/TileEntityEndGateway.java
 +++ b/src/main/java/net/minecraft/server/TileEntityEndGateway.java
 @@ -126,7 +126,7 @@ public class TileEntityEndGateway extends TileEntityEnderPortal implements ITick
@@ -19,5 +17,5 @@ index 2a17115ac6..b36dcb4d7d 100644
                      if (teleEvent.isCancelled()) {
                          return;
 -- 
-2.19.0
+2.19.1
 

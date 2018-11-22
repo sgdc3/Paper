@@ -1,4 +1,3 @@
-From a0d86a396033f06301c88c4714d383b2fa6bacf3 Mon Sep 17 00:00:00 2001
 From: miclebrick <miclebrick@outlook.com>
 Date: Thu, 23 Aug 2018 11:45:32 -0400
 Subject: [PATCH] Optimize CraftBlockData Creation
@@ -7,7 +6,6 @@ Avoids a hashmap lookup by cacheing a reference to the CraftBlockData
 and cloning it when one is needed.
 
 diff --git a/src/main/java/net/minecraft/server/BlockData.java b/src/main/java/net/minecraft/server/BlockData.java
-index fbe181c1fd..bd86cd2e54 100644
 --- a/src/main/java/net/minecraft/server/BlockData.java
 +++ b/src/main/java/net/minecraft/server/BlockData.java
 @@ -1,6 +1,7 @@
@@ -34,7 +32,6 @@ index fbe181c1fd..bd86cd2e54 100644
 +    // Paper end
  }
 diff --git a/src/main/java/net/minecraft/server/IBlockData.java b/src/main/java/net/minecraft/server/IBlockData.java
-index bf06a90312..4d62d0093d 100644
 --- a/src/main/java/net/minecraft/server/IBlockData.java
 +++ b/src/main/java/net/minecraft/server/IBlockData.java
 @@ -23,6 +23,8 @@ public interface IBlockData extends IBlockDataHolder<IBlockData> {
@@ -47,7 +44,6 @@ index bf06a90312..4d62d0093d 100644
          return this.getBlock().n(this);
      }
 diff --git a/src/main/java/org/bukkit/craftbukkit/block/data/CraftBlockData.java b/src/main/java/org/bukkit/craftbukkit/block/data/CraftBlockData.java
-index d470e2b34a..b9279d925c 100644
 --- a/src/main/java/org/bukkit/craftbukkit/block/data/CraftBlockData.java
 +++ b/src/main/java/org/bukkit/craftbukkit/block/data/CraftBlockData.java
 @@ -501,7 +501,17 @@ public class CraftBlockData implements BlockData {
@@ -69,5 +65,5 @@ index d470e2b34a..b9279d925c 100644
      }
  }
 -- 
-2.19.0
+2.19.1
 

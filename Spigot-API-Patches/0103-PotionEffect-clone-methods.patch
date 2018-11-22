@@ -1,11 +1,9 @@
-From 18997534f496e4e8c96f06b8632f4605bc513711 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Sun, 3 Jun 2018 04:10:13 -0400
 Subject: [PATCH] PotionEffect clone methods
 
 
 diff --git a/src/main/java/org/bukkit/potion/PotionEffect.java b/src/main/java/org/bukkit/potion/PotionEffect.java
-index 86616f1b8..efb55d29c 100644
 --- a/src/main/java/org/bukkit/potion/PotionEffect.java
 +++ b/src/main/java/org/bukkit/potion/PotionEffect.java
 @@ -100,6 +100,27 @@ public class PotionEffect implements ConfigurationSerializable {
@@ -37,5 +35,5 @@ index 86616f1b8..efb55d29c 100644
          int type = getInt(map, TYPE);
          PotionEffectType effect = PotionEffectType.getById(type);
 -- 
-2.18.0
+2.19.1
 

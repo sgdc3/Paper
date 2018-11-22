@@ -1,4 +1,3 @@
-From 082f9d34462d71296bfea52d7a17efc3dd2b547b Mon Sep 17 00:00:00 2001
 From: Minecrell <minecrell@minecrell.net>
 Date: Thu, 21 Sep 2017 16:14:13 +0200
 Subject: [PATCH] Handle plugin prefixes in implementation logging
@@ -17,7 +16,6 @@ The implementation should handle plugin prefixes by displaying
 logger names when appropriate.
 
 diff --git a/src/main/java/org/bukkit/plugin/java/JavaPlugin.java b/src/main/java/org/bukkit/plugin/java/JavaPlugin.java
-index 678878064..a81dae439 100644
 --- a/src/main/java/org/bukkit/plugin/java/JavaPlugin.java
 +++ b/src/main/java/org/bukkit/plugin/java/JavaPlugin.java
 @@ -42,7 +42,7 @@ public abstract class JavaPlugin extends PluginBase {

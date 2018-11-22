@@ -1,4 +1,3 @@
-From 2d6c06d66fa0bb54e1e769dc71adbb750c64225d Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Wed, 4 May 2016 23:55:48 -0400
 Subject: [PATCH] ensureServerConversions API
@@ -7,7 +6,6 @@ This will take a Bukkit ItemStack and run it through any conversions a server pr
 to ensure it meets latest minecraft expectations.
 
 diff --git a/src/main/java/org/bukkit/inventory/ItemFactory.java b/src/main/java/org/bukkit/inventory/ItemFactory.java
-index ec2b8b8ed..3012aec22 100644
 --- a/src/main/java/org/bukkit/inventory/ItemFactory.java
 +++ b/src/main/java/org/bukkit/inventory/ItemFactory.java
 @@ -134,4 +134,16 @@ public interface ItemFactory {
@@ -28,7 +26,6 @@ index ec2b8b8ed..3012aec22 100644
 +    // Paper end
  }
 diff --git a/src/main/java/org/bukkit/inventory/ItemStack.java b/src/main/java/org/bukkit/inventory/ItemStack.java
-index c744799f6..5e8de1152 100644
 --- a/src/main/java/org/bukkit/inventory/ItemStack.java
 +++ b/src/main/java/org/bukkit/inventory/ItemStack.java
 @@ -506,7 +506,12 @@ public class ItemStack implements Cloneable, ConfigurationSerializable {
@@ -65,5 +62,5 @@ index c744799f6..5e8de1152 100644
 +    // Paper end
  }
 -- 
-2.18.0
+2.19.1
 

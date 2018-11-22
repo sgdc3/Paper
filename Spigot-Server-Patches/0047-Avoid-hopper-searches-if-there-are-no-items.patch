@@ -1,4 +1,3 @@
-From 7ac07ac07ac07ac07ac07ac07ac07ac07ac07ac0 Mon Sep 17 00:00:00 2001
 From: CullanP <cullanpage@gmail.com>
 Date: Thu, 3 Mar 2016 02:13:38 -0600
 Subject: [PATCH] Avoid hopper searches if there are no items
@@ -14,7 +13,6 @@ And since minecart hoppers are used _very_ rarely near we can avoid alot of sear
 Combined, this adds up a lot.
 
 diff --git a/src/main/java/net/minecraft/server/Chunk.java b/src/main/java/net/minecraft/server/Chunk.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/Chunk.java
 +++ b/src/main/java/net/minecraft/server/Chunk.java
 @@ -91,6 +91,10 @@ public class Chunk implements IChunkAccess {
@@ -88,7 +86,6 @@ index 7ac07ac07ac0..7ac07ac07ac0 100644
  
              while (iterator.hasNext()) {
 diff --git a/src/main/java/net/minecraft/server/IEntitySelector.java b/src/main/java/net/minecraft/server/IEntitySelector.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/IEntitySelector.java
 +++ b/src/main/java/net/minecraft/server/IEntitySelector.java
 @@ -10,6 +10,7 @@ public final class IEntitySelector {

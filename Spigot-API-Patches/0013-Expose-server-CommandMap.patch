@@ -1,11 +1,9 @@
-From 76b7c9bfc8893c63975484bf9223df8c1e50c6e7 Mon Sep 17 00:00:00 2001
 From: kashike <kashike@vq.lc>
 Date: Mon, 29 Feb 2016 19:48:59 -0600
 Subject: [PATCH] Expose server CommandMap
 
 
 diff --git a/src/main/java/org/bukkit/Bukkit.java b/src/main/java/org/bukkit/Bukkit.java
-index a20c7b73..32db4b77 100644
 --- a/src/main/java/org/bukkit/Bukkit.java
 +++ b/src/main/java/org/bukkit/Bukkit.java
 @@ -1390,6 +1390,17 @@ public final class Bukkit {
@@ -27,7 +25,6 @@ index a20c7b73..32db4b77 100644
      {
          return server.spigot();
 diff --git a/src/main/java/org/bukkit/Server.java b/src/main/java/org/bukkit/Server.java
-index 6e8b1380..10ee377a 100644
 --- a/src/main/java/org/bukkit/Server.java
 +++ b/src/main/java/org/bukkit/Server.java
 @@ -1061,6 +1061,14 @@ public interface Server extends PluginMessageRecipient {

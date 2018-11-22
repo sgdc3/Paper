@@ -1,11 +1,9 @@
-From 7ac07ac07ac07ac07ac07ac07ac07ac07ac07ac0 Mon Sep 17 00:00:00 2001
 From: Byteflux <byte@byteflux.net>
 Date: Tue, 1 Mar 2016 15:08:03 -0600
 Subject: [PATCH] Remove invalid mob spawner tile entities
 
 
 diff --git a/src/main/java/net/minecraft/server/Chunk.java b/src/main/java/net/minecraft/server/Chunk.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/Chunk.java
 +++ b/src/main/java/net/minecraft/server/Chunk.java
 @@ -793,6 +793,10 @@ public class Chunk implements IChunkAccess {

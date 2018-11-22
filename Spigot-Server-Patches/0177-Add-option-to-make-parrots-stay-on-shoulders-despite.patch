@@ -1,4 +1,3 @@
-From c237475d62521c78a025e9b6d825149d665fb433 Mon Sep 17 00:00:00 2001
 From: Zach Brown <zach.brown@destroystokyo.com>
 Date: Tue, 16 May 2017 21:29:08 -0500
 Subject: [PATCH] Add option to make parrots stay on shoulders despite movement
@@ -11,7 +10,6 @@ I suspect Mojang may switch to this behavior before full release.
 To be converted into a Paper-API event at some point in the future?
 
 diff --git a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
-index 02d99aec43..3507997fc3 100644
 --- a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 +++ b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 @@ -361,4 +361,10 @@ public class PaperWorldConfig {
@@ -26,7 +24,6 @@ index 02d99aec43..3507997fc3 100644
 +    }
  }
 diff --git a/src/main/java/net/minecraft/server/EntityHuman.java b/src/main/java/net/minecraft/server/EntityHuman.java
-index 816854dc2f..64a8c6308c 100644
 --- a/src/main/java/net/minecraft/server/EntityHuman.java
 +++ b/src/main/java/net/minecraft/server/EntityHuman.java
 @@ -468,7 +468,7 @@ public abstract class EntityHuman extends EntityLiving {
@@ -39,7 +36,6 @@ index 816854dc2f..64a8c6308c 100644
  
      }
 diff --git a/src/main/java/net/minecraft/server/PlayerConnection.java b/src/main/java/net/minecraft/server/PlayerConnection.java
-index 7ed26f6bf0..3289ba3ffd 100644
 --- a/src/main/java/net/minecraft/server/PlayerConnection.java
 +++ b/src/main/java/net/minecraft/server/PlayerConnection.java
 @@ -1762,6 +1762,13 @@ public class PlayerConnection implements PacketListenerPlayIn, ITickable {

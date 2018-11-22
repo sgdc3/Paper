@@ -1,4 +1,3 @@
-From 45e1223c049ddcb41d076b94e742adf299b762eb Mon Sep 17 00:00:00 2001
 From: Minecrell <minecrell@minecrell.net>
 Date: Thu, 21 Sep 2017 16:14:55 +0200
 Subject: [PATCH] Handle plugin prefixes using Log4J configuration
@@ -15,7 +14,6 @@ This may cause additional prefixes to be disabled for plugins bypassing
 the plugin logger.
 
 diff --git a/pom.xml b/pom.xml
-index 815f9ef393..ed920ac4a0 100644
 --- a/pom.xml
 +++ b/pom.xml
 @@ -60,7 +60,7 @@
@@ -28,7 +26,6 @@ index 815f9ef393..ed920ac4a0 100644
          <dependency>
              <groupId>org.apache.logging.log4j</groupId>
 diff --git a/src/main/java/org/spigotmc/SpigotConfig.java b/src/main/java/org/spigotmc/SpigotConfig.java
-index 9dca5aeda1..9584950c63 100644
 --- a/src/main/java/org/spigotmc/SpigotConfig.java
 +++ b/src/main/java/org/spigotmc/SpigotConfig.java
 @@ -292,7 +292,7 @@ public class SpigotConfig
@@ -41,7 +38,6 @@ index 9dca5aeda1..9584950c63 100644
  
      public static int playerShuffle;
 diff --git a/src/main/resources/log4j2.xml b/src/main/resources/log4j2.xml
-index 08b6bb7f97..9f8334376f 100644
 --- a/src/main/resources/log4j2.xml
 +++ b/src/main/resources/log4j2.xml
 @@ -2,10 +2,22 @@
@@ -70,5 +66,5 @@ index 08b6bb7f97..9f8334376f 100644
                  <TimeBasedTriggeringPolicy />
                  <OnStartupTriggeringPolicy />
 -- 
-2.19.0
+2.19.1
 

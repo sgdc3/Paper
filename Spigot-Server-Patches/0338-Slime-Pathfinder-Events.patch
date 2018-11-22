@@ -1,11 +1,9 @@
-From 3d06b85ae5fd05a8885801d0a8d94dd2c907b4ef Mon Sep 17 00:00:00 2001
 From: BillyGalbreath <Blake.Galbreath@GMail.com>
 Date: Fri, 24 Aug 2018 08:18:42 -0500
 Subject: [PATCH] Slime Pathfinder Events
 
 
 diff --git a/src/main/java/net/minecraft/server/EntitySlime.java b/src/main/java/net/minecraft/server/EntitySlime.java
-index e913accd..54c5f746 100644
 --- a/src/main/java/net/minecraft/server/EntitySlime.java
 +++ b/src/main/java/net/minecraft/server/EntitySlime.java
 @@ -1,6 +1,14 @@
@@ -145,7 +143,6 @@ index e913accd..54c5f746 100644
 +    // Paper end
  }
 diff --git a/src/main/java/org/bukkit/craftbukkit/entity/CraftSlime.java b/src/main/java/org/bukkit/craftbukkit/entity/CraftSlime.java
-index 18e7ef80..8403c1e0 100644
 --- a/src/main/java/org/bukkit/craftbukkit/entity/CraftSlime.java
 +++ b/src/main/java/org/bukkit/craftbukkit/entity/CraftSlime.java
 @@ -33,4 +33,14 @@ public class CraftSlime extends CraftMob implements Slime {
@@ -164,5 +161,5 @@ index 18e7ef80..8403c1e0 100644
 +    // Paper end
  }
 -- 
-2.17.1
+2.19.1
 

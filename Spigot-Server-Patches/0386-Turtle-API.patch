@@ -1,11 +1,9 @@
-From 7ac07ac07ac07ac07ac07ac07ac07ac07ac07ac0 Mon Sep 17 00:00:00 2001
 From: BillyGalbreath <Blake.Galbreath@GMail.com>
 Date: Sat, 29 Sep 2018 16:08:23 -0500
 Subject: [PATCH] Turtle API
 
 
 diff --git a/src/main/java/net/minecraft/server/EntityTurtle.java b/src/main/java/net/minecraft/server/EntityTurtle.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/EntityTurtle.java
 +++ b/src/main/java/net/minecraft/server/EntityTurtle.java
 @@ -27,51 +27,63 @@ public class EntityTurtle extends EntityAnimal {
@@ -104,7 +102,6 @@ index 7ac07ac07ac0..7ac07ac07ac0 100644
  
          public void c() {
 diff --git a/src/main/java/org/bukkit/craftbukkit/entity/CraftTurtle.java b/src/main/java/org/bukkit/craftbukkit/entity/CraftTurtle.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/org/bukkit/craftbukkit/entity/CraftTurtle.java
 +++ b/src/main/java/org/bukkit/craftbukkit/entity/CraftTurtle.java
 @@ -1,6 +1,8 @@

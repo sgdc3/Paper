@@ -1,4 +1,3 @@
-From 7ac07ac07ac07ac07ac07ac07ac07ac07ac07ac0 Mon Sep 17 00:00:00 2001
 From: Gabriele C <sgdc3.mail@gmail.com>
 Date: Mon, 22 Oct 2018 17:34:10 +0200
 Subject: [PATCH] Add option to prevent players from moving into unloaded
@@ -6,7 +5,6 @@ Subject: [PATCH] Add option to prevent players from moving into unloaded
 
 
 diff --git a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 +++ b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 @@ -564,4 +564,9 @@ public class PaperWorldConfig {
@@ -20,7 +18,6 @@ index 7ac07ac07ac0..7ac07ac07ac0 100644
 +    }
  }
 diff --git a/src/main/java/net/minecraft/server/PlayerConnection.java b/src/main/java/net/minecraft/server/PlayerConnection.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/PlayerConnection.java
 +++ b/src/main/java/net/minecraft/server/PlayerConnection.java
 @@ -342,6 +342,13 @@ public class PlayerConnection implements PacketListenerPlayIn, ITickable {

@@ -1,4 +1,3 @@
-From 9abc8366e45aaefa1b77f49d19c02cd94c6accc6 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Thu, 28 May 2015 23:00:19 -0400
 Subject: [PATCH] Handle Item Meta Inconsistencies
@@ -18,7 +17,6 @@ For consistency, the old API methods now forward to use the
 ItemMeta API equivalents, and should deprecate the old API's.
 
 diff --git a/src/main/java/net/minecraft/server/ItemStack.java b/src/main/java/net/minecraft/server/ItemStack.java
-index 318c4204df..56787ed25c 100644
 --- a/src/main/java/net/minecraft/server/ItemStack.java
 +++ b/src/main/java/net/minecraft/server/ItemStack.java
 @@ -7,6 +7,8 @@ import com.mojang.brigadier.StringReader;
@@ -78,7 +76,6 @@ index 318c4204df..56787ed25c 100644
  
      public boolean hasEnchantments() {
 diff --git a/src/main/java/org/bukkit/craftbukkit/inventory/CraftItemStack.java b/src/main/java/org/bukkit/craftbukkit/inventory/CraftItemStack.java
-index 1d0580ff7f..2733cda407 100644
 --- a/src/main/java/org/bukkit/craftbukkit/inventory/CraftItemStack.java
 +++ b/src/main/java/org/bukkit/craftbukkit/inventory/CraftItemStack.java
 @@ -4,6 +4,7 @@ import static org.bukkit.craftbukkit.inventory.CraftMetaItem.ENCHANTMENTS;
@@ -201,7 +198,6 @@ index 1d0580ff7f..2733cda407 100644
  
      static Map<Enchantment, Integer> getEnchantments(net.minecraft.server.ItemStack item) {
 diff --git a/src/main/java/org/bukkit/craftbukkit/inventory/CraftMetaItem.java b/src/main/java/org/bukkit/craftbukkit/inventory/CraftMetaItem.java
-index 99276f1165..6528668816 100644
 --- a/src/main/java/org/bukkit/craftbukkit/inventory/CraftMetaItem.java
 +++ b/src/main/java/org/bukkit/craftbukkit/inventory/CraftMetaItem.java
 @@ -8,6 +8,7 @@ import java.lang.reflect.Constructor;
@@ -337,5 +333,5 @@ index 99276f1165..6528668816 100644
      private final Spigot spigot = new Spigot()
      {
 -- 
-2.19.0
+2.19.1
 

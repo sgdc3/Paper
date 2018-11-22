@@ -1,11 +1,9 @@
-From 6a8062188a480ab5bc541016f54b972193b12045 Mon Sep 17 00:00:00 2001
 From: Zach Brown <zach.brown@destroystokyo.com>
 Date: Tue, 20 Dec 2016 23:09:21 -0600
 Subject: [PATCH] Add option to remove invalid statistics
 
 
 diff --git a/src/main/java/com/destroystokyo/paper/PaperConfig.java b/src/main/java/com/destroystokyo/paper/PaperConfig.java
-index ae3d0f8f7..6b92ea437 100644
 --- a/src/main/java/com/destroystokyo/paper/PaperConfig.java
 +++ b/src/main/java/com/destroystokyo/paper/PaperConfig.java
 @@ -280,4 +280,13 @@ public class PaperConfig {
@@ -23,7 +21,6 @@ index ae3d0f8f7..6b92ea437 100644
 +    }
  }
 diff --git a/src/main/java/net/minecraft/server/ServerStatisticManager.java b/src/main/java/net/minecraft/server/ServerStatisticManager.java
-index 6405f98e0..42e2f3d22 100644
 --- a/src/main/java/net/minecraft/server/ServerStatisticManager.java
 +++ b/src/main/java/net/minecraft/server/ServerStatisticManager.java
 @@ -83,6 +83,7 @@ public class ServerStatisticManager extends StatisticManager {

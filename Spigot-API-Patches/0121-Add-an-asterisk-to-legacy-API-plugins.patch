@@ -1,4 +1,3 @@
-From 218ebb72abe3b026f00a6378ff1529e4e2210c0b Mon Sep 17 00:00:00 2001
 From: Zach Brown <zach.brown@destroystokyo.com>
 Date: Thu, 19 Jul 2018 15:07:02 -0500
 Subject: [PATCH] Add an asterisk to legacy API plugins
@@ -7,7 +6,6 @@ Not here to name and shame, only so server admins can be aware of which
 plugins have and haven't been updated.
 
 diff --git a/src/main/java/org/bukkit/UnsafeValues.java b/src/main/java/org/bukkit/UnsafeValues.java
-index a4aabfe7f..f462b631b 100644
 --- a/src/main/java/org/bukkit/UnsafeValues.java
 +++ b/src/main/java/org/bukkit/UnsafeValues.java
 @@ -67,4 +67,10 @@ public interface UnsafeValues {
@@ -22,7 +20,6 @@ index a4aabfe7f..f462b631b 100644
 +    // Paper end
  }
 diff --git a/src/main/java/org/bukkit/command/defaults/PluginsCommand.java b/src/main/java/org/bukkit/command/defaults/PluginsCommand.java
-index b1d384e82..72c0c0bc6 100644
 --- a/src/main/java/org/bukkit/command/defaults/PluginsCommand.java
 +++ b/src/main/java/org/bukkit/command/defaults/PluginsCommand.java
 @@ -38,7 +38,14 @@ public class PluginsCommand extends BukkitCommand {
@@ -42,7 +39,6 @@ index b1d384e82..72c0c0bc6 100644
  
          StringBuilder pluginList = new StringBuilder();
 diff --git a/src/main/java/org/bukkit/plugin/java/JavaPluginLoader.java b/src/main/java/org/bukkit/plugin/java/JavaPluginLoader.java
-index 3cff01b6b..2b9aad0a7 100644
 --- a/src/main/java/org/bukkit/plugin/java/JavaPluginLoader.java
 +++ b/src/main/java/org/bukkit/plugin/java/JavaPluginLoader.java
 @@ -303,7 +303,14 @@ public final class JavaPluginLoader implements PluginLoader {
@@ -62,5 +58,5 @@ index 3cff01b6b..2b9aad0a7 100644
              JavaPlugin jPlugin = (JavaPlugin) plugin;
  
 -- 
-2.18.0
+2.19.1
 

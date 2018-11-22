@@ -1,4 +1,3 @@
-From 7ac07ac07ac07ac07ac07ac07ac07ac07ac07ac0 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Wed, 2 Mar 2016 00:52:31 -0600
 Subject: [PATCH] Lighting Queue
@@ -6,7 +5,6 @@ Subject: [PATCH] Lighting Queue
 This provides option to queue lighting updates to ensure they do not cause the server lag
 
 diff --git a/src/main/java/co/aikar/timings/WorldTimingsHandler.java b/src/main/java/co/aikar/timings/WorldTimingsHandler.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/co/aikar/timings/WorldTimingsHandler.java
 +++ b/src/main/java/co/aikar/timings/WorldTimingsHandler.java
 @@ -50,6 +50,8 @@ public class WorldTimingsHandler {
@@ -28,7 +26,6 @@ index 7ac07ac07ac0..7ac07ac07ac0 100644
  
      public static Timing getTickList(WorldServer worldserver, String timingsType) {
 diff --git a/src/main/java/com/destroystokyo/paper/PaperConfig.java b/src/main/java/com/destroystokyo/paper/PaperConfig.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/com/destroystokyo/paper/PaperConfig.java
 +++ b/src/main/java/com/destroystokyo/paper/PaperConfig.java
 @@ -191,6 +191,13 @@ public class PaperConfig {
@@ -46,7 +43,6 @@ index 7ac07ac07ac0..7ac07ac07ac0 100644
          boolean timings = getBoolean("timings.enabled", true);
          boolean verboseTimings = getBoolean("timings.verbose", true);
 diff --git a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 +++ b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 @@ -130,4 +130,12 @@ public class PaperWorldConfig {
@@ -63,7 +59,6 @@ index 7ac07ac07ac0..7ac07ac07ac0 100644
 +    }
  }
 diff --git a/src/main/java/net/minecraft/server/Chunk.java b/src/main/java/net/minecraft/server/Chunk.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/Chunk.java
 +++ b/src/main/java/net/minecraft/server/Chunk.java
 @@ -90,6 +90,7 @@ public class Chunk implements IChunkAccess {
@@ -126,7 +121,6 @@ index 7ac07ac07ac0..7ac07ac07ac0 100644
  
          IMMEDIATE, QUEUED, CHECK;
 diff --git a/src/main/java/net/minecraft/server/ChunkProviderServer.java b/src/main/java/net/minecraft/server/ChunkProviderServer.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/ChunkProviderServer.java
 +++ b/src/main/java/net/minecraft/server/ChunkProviderServer.java
 @@ -314,6 +314,7 @@ public class ChunkProviderServer implements IChunkProvider {
@@ -138,7 +132,6 @@ index 7ac07ac07ac0..7ac07ac07ac0 100644
          // Update neighbor counts
          for (int x = -2; x < 3; x++) {
 diff --git a/src/main/java/net/minecraft/server/MinecraftServer.java b/src/main/java/net/minecraft/server/MinecraftServer.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/MinecraftServer.java
 +++ b/src/main/java/net/minecraft/server/MinecraftServer.java
 @@ -894,7 +894,7 @@ public abstract class MinecraftServer implements IAsyncTaskHandler, IMojangStati
@@ -160,7 +153,6 @@ index 7ac07ac07ac0..7ac07ac07ac0 100644
      }
 diff --git a/src/main/java/net/minecraft/server/PaperLightingQueue.java b/src/main/java/net/minecraft/server/PaperLightingQueue.java
 new file mode 100644
-index 7ac07ac07ac0..7ac07ac07ac0
 --- /dev/null
 +++ b/src/main/java/net/minecraft/server/PaperLightingQueue.java
 @@ -0,0 +1,98 @@
@@ -263,7 +255,6 @@ index 7ac07ac07ac0..7ac07ac07ac0
 +    }
 +}
 diff --git a/src/main/java/net/minecraft/server/World.java b/src/main/java/net/minecraft/server/World.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/World.java
 +++ b/src/main/java/net/minecraft/server/World.java
 @@ -335,7 +335,7 @@ public abstract class World implements IEntityAccess, GeneratorAccess, IIBlockAc

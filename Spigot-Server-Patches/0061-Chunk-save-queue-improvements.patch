@@ -1,4 +1,3 @@
-From 4b04c2b61a16280bc65656261c939ee5bb665606 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Fri, 4 Mar 2016 18:18:37 -0600
 Subject: [PATCH] Chunk save queue improvements
@@ -26,7 +25,6 @@ Then finally, Sleeping will by default be removed, but due to known issues with 
 But if sleeps are to remain enabled, we at least lower the sleep interval so it doesn't have as much negative impact.
 
 diff --git a/src/main/java/com/destroystokyo/paper/PaperConfig.java b/src/main/java/com/destroystokyo/paper/PaperConfig.java
-index aa920c469..4aad68a57 100644
 --- a/src/main/java/com/destroystokyo/paper/PaperConfig.java
 +++ b/src/main/java/com/destroystokyo/paper/PaperConfig.java
 @@ -217,4 +217,10 @@ public class PaperConfig {
@@ -41,7 +39,6 @@ index aa920c469..4aad68a57 100644
 +    }
  }
 diff --git a/src/main/java/net/minecraft/server/ChunkCoordIntPair.java b/src/main/java/net/minecraft/server/ChunkCoordIntPair.java
-index d9608121b..d7a670093 100644
 --- a/src/main/java/net/minecraft/server/ChunkCoordIntPair.java
 +++ b/src/main/java/net/minecraft/server/ChunkCoordIntPair.java
 @@ -19,6 +19,7 @@ public class ChunkCoordIntPair {
@@ -53,7 +50,6 @@ index d9608121b..d7a670093 100644
          return a(this.x, this.z);
      }
 diff --git a/src/main/java/net/minecraft/server/ChunkRegionLoader.java b/src/main/java/net/minecraft/server/ChunkRegionLoader.java
-index 43f77a398..4a0f3989e 100644
 --- a/src/main/java/net/minecraft/server/ChunkRegionLoader.java
 +++ b/src/main/java/net/minecraft/server/ChunkRegionLoader.java
 @@ -22,6 +22,7 @@ import java.util.function.Consumer;
@@ -171,7 +167,6 @@ index 43f77a398..4a0f3989e 100644
                      NBTCompressedStreamTools.a(nbttagcompound, (DataOutput) dataoutputstream);
                      dataoutputstream.close();
 diff --git a/src/main/java/net/minecraft/server/FileIOThread.java b/src/main/java/net/minecraft/server/FileIOThread.java
-index a3aba244a..97917551a 100644
 --- a/src/main/java/net/minecraft/server/FileIOThread.java
 +++ b/src/main/java/net/minecraft/server/FileIOThread.java
 @@ -35,20 +35,21 @@ public class FileIOThread implements Runnable {

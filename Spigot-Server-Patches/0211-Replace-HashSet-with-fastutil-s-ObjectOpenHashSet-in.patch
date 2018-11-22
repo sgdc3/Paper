@@ -1,4 +1,3 @@
-From 87ff1130c173155c8c30225d7a91e3dd8a56e96e Mon Sep 17 00:00:00 2001
 From: Brokkonaut <hannos17@gmx.de>
 Date: Fri, 20 Oct 2017 04:33:45 +0200
 Subject: [PATCH] Replace HashSet with fastutil's ObjectOpenHashSet in
@@ -13,7 +12,6 @@ ObjectOpenHashSet never uses compareTo(), so the inconsistencies of NextTickList
 Fixes https://github.com/PaperMC/Paper/issues/588
 
 diff --git a/src/main/java/org/bukkit/craftbukkit/util/HashTreeSet.java b/src/main/java/org/bukkit/craftbukkit/util/HashTreeSet.java
-index 80a5c29f3b..cd864c4047 100644
 --- a/src/main/java/org/bukkit/craftbukkit/util/HashTreeSet.java
 +++ b/src/main/java/org/bukkit/craftbukkit/util/HashTreeSet.java
 @@ -8,7 +8,7 @@ import java.util.TreeSet;
@@ -26,5 +24,5 @@ index 80a5c29f3b..cd864c4047 100644
  
      public HashTreeSet() {
 -- 
-2.19.0
+2.19.1
 

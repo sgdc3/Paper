@@ -1,11 +1,9 @@
-From f53a589e0196b116fe888b7cdadc4d356f122ba6 Mon Sep 17 00:00:00 2001
 From: Zach Brown <zach.brown@destroystokyo.com>
 Date: Thu, 3 Mar 2016 03:53:43 -0600
 Subject: [PATCH] Allow for toggling of spawn chunks
 
 
 diff --git a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
-index 02f7e506e3..cef0c47ac7 100644
 --- a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 +++ b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 @@ -108,4 +108,10 @@ public class PaperWorldConfig {
@@ -20,7 +18,6 @@ index 02f7e506e3..cef0c47ac7 100644
 +    }
  }
 diff --git a/src/main/java/net/minecraft/server/World.java b/src/main/java/net/minecraft/server/World.java
-index c3c435cab9..30a46a50fb 100644
 --- a/src/main/java/net/minecraft/server/World.java
 +++ b/src/main/java/net/minecraft/server/World.java
 @@ -207,6 +207,7 @@ public abstract class World implements IEntityAccess, GeneratorAccess, IIBlockAc
@@ -32,5 +29,5 @@ index c3c435cab9..30a46a50fb 100644
          this.tileLimiter = new org.spigotmc.TickLimiter(spigotConfig.tileMaxTickTime);
      }
 -- 
-2.18.0
+2.19.1
 

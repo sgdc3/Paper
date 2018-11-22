@@ -1,11 +1,9 @@
-From fe5d1f6d166e14ba309e16fb90c12c82ab35e5c4 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Sun, 8 Mar 2015 22:55:25 -0600
 Subject: [PATCH] Optimize TileEntity Ticking
 
 
 diff --git a/src/main/java/net/minecraft/server/BlockChest.java b/src/main/java/net/minecraft/server/BlockChest.java
-index 9ffec378a9..5401f7d754 100644
 --- a/src/main/java/net/minecraft/server/BlockChest.java
 +++ b/src/main/java/net/minecraft/server/BlockChest.java
 @@ -216,7 +216,7 @@ public class BlockChest extends BlockTileEntity implements IFluidSource, IFluidC
@@ -18,7 +16,6 @@ index 9ffec378a9..5401f7d754 100644
              for(EntityOcelot entityocelot : list) {
                  if (entityocelot.isSitting()) {
 diff --git a/src/main/java/net/minecraft/server/TileEntityChest.java b/src/main/java/net/minecraft/server/TileEntityChest.java
-index ad601a39d9..9573a4ecdf 100644
 --- a/src/main/java/net/minecraft/server/TileEntityChest.java
 +++ b/src/main/java/net/minecraft/server/TileEntityChest.java
 @@ -7,7 +7,7 @@ import org.bukkit.craftbukkit.entity.CraftHumanEntity;
@@ -104,7 +101,6 @@ index ad601a39d9..9573a4ecdf 100644
                  int newPower = Math.max(0, Math.min(15, this.f));
  
 diff --git a/src/main/java/net/minecraft/server/TileEntityEnderChest.java b/src/main/java/net/minecraft/server/TileEntityEnderChest.java
-index 05de26405e..bc851d2a04 100644
 --- a/src/main/java/net/minecraft/server/TileEntityEnderChest.java
 +++ b/src/main/java/net/minecraft/server/TileEntityEnderChest.java
 @@ -1,6 +1,6 @@
@@ -166,5 +162,5 @@ index 05de26405e..bc851d2a04 100644
  
      public boolean a(EntityHuman entityhuman) {
 -- 
-2.18.0
+2.19.1
 

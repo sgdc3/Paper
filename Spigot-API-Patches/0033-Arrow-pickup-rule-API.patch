@@ -1,11 +1,9 @@
-From 57f8f2e8bfc9419a07a28ad20fb52c13ee3e5562 Mon Sep 17 00:00:00 2001
 From: Jedediah Smith <jedediah@silencegreys.com>
 Date: Fri, 4 Mar 2016 03:13:18 -0500
 Subject: [PATCH] Arrow pickup rule API
 
 
 diff --git a/src/main/java/org/bukkit/entity/Arrow.java b/src/main/java/org/bukkit/entity/Arrow.java
-index 99814eee..34dde443 100644
 --- a/src/main/java/org/bukkit/entity/Arrow.java
 +++ b/src/main/java/org/bukkit/entity/Arrow.java
 @@ -108,4 +108,38 @@ public interface Arrow extends Projectile {
@@ -48,5 +46,5 @@ index 99814eee..34dde443 100644
 +    // Paper end
  }
 -- 
-2.18.0
+2.19.1
 

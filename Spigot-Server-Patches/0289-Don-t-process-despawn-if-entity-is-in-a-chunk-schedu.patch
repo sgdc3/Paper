@@ -1,4 +1,3 @@
-From 085ab94bffa4a3c2d94334a64b83e5af05902981 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Thu, 19 Jul 2018 01:23:00 -0400
 Subject: [PATCH] Don't process despawn if entity is in a chunk scheduled for
@@ -12,7 +11,6 @@ keep it vanilla in behavior
 a player may teleport away, and trigger instant despawn
 
 diff --git a/src/main/java/net/minecraft/server/EntityInsentient.java b/src/main/java/net/minecraft/server/EntityInsentient.java
-index 200d46a8a0..db9201d292 100644
 --- a/src/main/java/net/minecraft/server/EntityInsentient.java
 +++ b/src/main/java/net/minecraft/server/EntityInsentient.java
 @@ -634,6 +634,8 @@ public abstract class EntityInsentient extends EntityLiving {

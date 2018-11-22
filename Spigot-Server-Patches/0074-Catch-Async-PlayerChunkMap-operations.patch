@@ -1,11 +1,9 @@
-From 5f489d6f0d19763383fc223b8f8b1a0b3743ccf7 Mon Sep 17 00:00:00 2001
 From: Daniel Ennis <dennis@icontact.com>
 Date: Sun, 20 Mar 2016 15:22:42 -0400
 Subject: [PATCH] Catch Async PlayerChunkMap operations
 
 
 diff --git a/src/main/java/net/minecraft/server/PlayerChunkMap.java b/src/main/java/net/minecraft/server/PlayerChunkMap.java
-index fb593529e1..a69d510dd1 100644
 --- a/src/main/java/net/minecraft/server/PlayerChunkMap.java
 +++ b/src/main/java/net/minecraft/server/PlayerChunkMap.java
 @@ -442,10 +442,12 @@ public class PlayerChunkMap {
@@ -22,5 +20,5 @@ index fb593529e1..a69d510dd1 100644
          long i = d(chunkcoordintpair.x, chunkcoordintpair.z);
  
 -- 
-2.19.0
+2.19.1
 

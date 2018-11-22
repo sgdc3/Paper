@@ -1,4 +1,3 @@
-From da63912ec50ee3ed27e4473060f6a172146e123d Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Mon, 17 Jun 2013 01:24:00 -0400
 Subject: [PATCH] Entity Tracking Improvements
@@ -7,7 +6,6 @@ If any part of a Vehicle/Passenger relationship is visible to a player,
 send all passenger/vehicles to the player in the chain.
 
 diff --git a/src/main/java/net/minecraft/server/Entity.java b/src/main/java/net/minecraft/server/Entity.java
-index 1474209a1e..5e5c241669 100644
 --- a/src/main/java/net/minecraft/server/Entity.java
 +++ b/src/main/java/net/minecraft/server/Entity.java
 @@ -72,6 +72,7 @@ public abstract class Entity implements INamableTileEntity, ICommandListener, Ke
@@ -19,7 +17,6 @@ index 1474209a1e..5e5c241669 100644
          if (bukkitEntity == null) {
              bukkitEntity = CraftEntity.getEntity(world.getServer(), this);
 diff --git a/src/main/java/net/minecraft/server/EntityTrackerEntry.java b/src/main/java/net/minecraft/server/EntityTrackerEntry.java
-index 69d3b4f8e4..0b00ed3d00 100644
 --- a/src/main/java/net/minecraft/server/EntityTrackerEntry.java
 +++ b/src/main/java/net/minecraft/server/EntityTrackerEntry.java
 @@ -56,6 +56,7 @@ public class EntityTrackerEntry {

@@ -1,4 +1,3 @@
-From 5a4ad7c25a554997a5d590629a529cd35f099366 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Sat, 7 Jan 2017 15:23:03 -0500
 Subject: [PATCH] Provide E/TE/Chunk count stat methods
@@ -7,7 +6,6 @@ Provides counts without the ineffeciency of using .getEntities().size()
 which creates copy of the collections.
 
 diff --git a/src/main/java/org/bukkit/World.java b/src/main/java/org/bukkit/World.java
-index 94647047..06bcee03 100644
 --- a/src/main/java/org/bukkit/World.java
 +++ b/src/main/java/org/bukkit/World.java
 @@ -28,6 +28,33 @@ import org.bukkit.util.Vector;

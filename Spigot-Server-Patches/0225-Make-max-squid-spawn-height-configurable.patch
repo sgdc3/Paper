@@ -1,4 +1,3 @@
-From b772743743a4424318eec7d23057069599ac64a8 Mon Sep 17 00:00:00 2001
 From: Zach Brown <zach.brown@destroystokyo.com>
 Date: Thu, 11 Jan 2018 16:47:28 -0600
 Subject: [PATCH] Make max squid spawn height configurable
@@ -7,7 +6,6 @@ I don't know why upstream made only the minimum height configurable but
 whatever
 
 diff --git a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
-index ca7efc9175..67b4d576a9 100644
 --- a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 +++ b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 @@ -399,4 +399,9 @@ public class PaperWorldConfig {
@@ -21,7 +19,6 @@ index ca7efc9175..67b4d576a9 100644
 +    }
  }
 diff --git a/src/main/java/net/minecraft/server/EntitySquid.java b/src/main/java/net/minecraft/server/EntitySquid.java
-index 5d7d0b6910..2dfa794a3f 100644
 --- a/src/main/java/net/minecraft/server/EntitySquid.java
 +++ b/src/main/java/net/minecraft/server/EntitySquid.java
 @@ -167,7 +167,10 @@ public class EntitySquid extends EntityWaterAnimal {
@@ -37,5 +34,5 @@ index 5d7d0b6910..2dfa794a3f 100644
  
      public void c(float f, float f1, float f2) {
 -- 
-2.19.0
+2.19.1
 

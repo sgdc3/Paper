@@ -1,11 +1,9 @@
-From 121fabf8e1502b935c8d3f94635247b6d369de24 Mon Sep 17 00:00:00 2001
 From: Zach Brown <zach.brown@destroystokyo.com>
 Date: Mon, 29 Feb 2016 17:58:01 -0600
 Subject: [PATCH] Check Paper versions
 
 
 diff --git a/src/main/java/org/bukkit/command/defaults/VersionCommand.java b/src/main/java/org/bukkit/command/defaults/VersionCommand.java
-index 5a994953b..f38f68640 100644
 --- a/src/main/java/org/bukkit/command/defaults/VersionCommand.java
 +++ b/src/main/java/org/bukkit/command/defaults/VersionCommand.java
 @@ -26,6 +26,11 @@ import org.json.simple.JSONObject;

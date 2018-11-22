@@ -1,11 +1,9 @@
-From 7cc085846480e5bd02fa7d296150dd91ff2bcaf1 Mon Sep 17 00:00:00 2001
 From: Byteflux <byte@byteflux.net>
 Date: Wed, 2 Mar 2016 23:30:53 -0600
 Subject: [PATCH] Add BeaconEffectEvent
 
 
 diff --git a/src/main/java/net/minecraft/server/TileEntityBeacon.java b/src/main/java/net/minecraft/server/TileEntityBeacon.java
-index 7bd27ad7f9..eafd207467 100644
 --- a/src/main/java/net/minecraft/server/TileEntityBeacon.java
 +++ b/src/main/java/net/minecraft/server/TileEntityBeacon.java
 @@ -16,6 +16,12 @@ import org.bukkit.entity.HumanEntity;
@@ -68,5 +66,5 @@ index 7bd27ad7f9..eafd207467 100644
          }
  
 -- 
-2.18.0
+2.19.1
 

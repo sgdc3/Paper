@@ -1,11 +1,9 @@
-From cf7eb31d8748ed0bcf048d8146af360669173b0c Mon Sep 17 00:00:00 2001
 From: BillyGalbreath <Blake.Galbreath@GMail.com>
 Date: Sat, 21 Jul 2018 01:51:27 -0500
 Subject: [PATCH] EnderDragon Events
 
 
 diff --git a/src/main/java/net/minecraft/server/DragonControllerLandedFlame.java b/src/main/java/net/minecraft/server/DragonControllerLandedFlame.java
-index 45f96078c5..fed3e9daf1 100644
 --- a/src/main/java/net/minecraft/server/DragonControllerLandedFlame.java
 +++ b/src/main/java/net/minecraft/server/DragonControllerLandedFlame.java
 @@ -61,7 +61,9 @@ public class DragonControllerLandedFlame extends AbstractDragonControllerLanded
@@ -27,7 +25,6 @@ index 45f96078c5..fed3e9daf1 100644
          if (this.d != null) {
              this.d.die();
 diff --git a/src/main/java/net/minecraft/server/DragonControllerStrafe.java b/src/main/java/net/minecraft/server/DragonControllerStrafe.java
-index 66223af9a8..7aa8a5708d 100644
 --- a/src/main/java/net/minecraft/server/DragonControllerStrafe.java
 +++ b/src/main/java/net/minecraft/server/DragonControllerStrafe.java
 @@ -57,7 +57,9 @@ public class DragonControllerStrafe extends AbstractDragonController {
@@ -41,7 +38,6 @@ index 66223af9a8..7aa8a5708d 100644
                          if (this.d != null) {
                              while(!this.d.b()) {
 diff --git a/src/main/java/net/minecraft/server/EntityDragonFireball.java b/src/main/java/net/minecraft/server/EntityDragonFireball.java
-index e746a6a0da..366ebb8d2d 100644
 --- a/src/main/java/net/minecraft/server/EntityDragonFireball.java
 +++ b/src/main/java/net/minecraft/server/EntityDragonFireball.java
 @@ -32,8 +32,10 @@ public class EntityDragonFireball extends EntityFireball {
@@ -56,5 +52,5 @@ index e746a6a0da..366ebb8d2d 100644
              }
  
 -- 
-2.19.0
+2.19.1
 

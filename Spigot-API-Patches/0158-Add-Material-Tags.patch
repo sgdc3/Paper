@@ -1,4 +1,3 @@
-From 340d4255fde17caa3dff4eed9f2c63aab197f877 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Tue, 17 Jul 2018 01:27:15 -0400
 Subject: [PATCH] Add Material Tags
@@ -8,7 +7,6 @@ are related to each other by a trait.
 
 diff --git a/src/main/java/com/destroystokyo/paper/MaterialSetTag.java b/src/main/java/com/destroystokyo/paper/MaterialSetTag.java
 new file mode 100644
-index 000000000..b4f78e075
 --- /dev/null
 +++ b/src/main/java/com/destroystokyo/paper/MaterialSetTag.java
 @@ -0,0 +1,139 @@
@@ -153,7 +151,6 @@ index 000000000..b4f78e075
 +}
 diff --git a/src/main/java/com/destroystokyo/paper/MaterialTags.java b/src/main/java/com/destroystokyo/paper/MaterialTags.java
 new file mode 100644
-index 000000000..7a48445da
 --- /dev/null
 +++ b/src/main/java/com/destroystokyo/paper/MaterialTags.java
 @@ -0,0 +1,377 @@
@@ -536,7 +533,6 @@ index 000000000..7a48445da
 +}
 diff --git a/src/test/java/com/destroystokyo/paper/MaterialTagsTest.java b/src/test/java/com/destroystokyo/paper/MaterialTagsTest.java
 new file mode 100644
-index 000000000..328c51471
 --- /dev/null
 +++ b/src/test/java/com/destroystokyo/paper/MaterialTagsTest.java
 @@ -0,0 +1,25 @@
@@ -566,7 +562,6 @@ index 000000000..328c51471
 +    }
 +}
 diff --git a/src/test/java/org/bukkit/TestServer.java b/src/test/java/org/bukkit/TestServer.java
-index 2d8403206..613675c3b 100644
 --- a/src/test/java/org/bukkit/TestServer.java
 +++ b/src/test/java/org/bukkit/TestServer.java
 @@ -30,6 +30,16 @@ public class TestServer implements InvocationHandler {

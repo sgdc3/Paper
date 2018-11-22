@@ -1,11 +1,9 @@
-From f8b5db1f226e671fc1fd422e4723eb8eaa70eddc Mon Sep 17 00:00:00 2001
 From: Shane Freeder <theboyetronic@gmail.com>
 Date: Sun, 18 Nov 2018 19:44:54 +0000
 Subject: [PATCH] Make the default permission message configurable
 
 
 diff --git a/src/main/java/org/bukkit/Bukkit.java b/src/main/java/org/bukkit/Bukkit.java
-index 233a71540..22ca2900c 100644
 --- a/src/main/java/org/bukkit/Bukkit.java
 +++ b/src/main/java/org/bukkit/Bukkit.java
 @@ -1463,6 +1463,14 @@ public final class Bukkit {
@@ -24,7 +22,6 @@ index 233a71540..22ca2900c 100644
       * Creates a PlayerProfile for the specified uuid, with name as null
       * @param uuid UUID to create profile for
 diff --git a/src/main/java/org/bukkit/Server.java b/src/main/java/org/bukkit/Server.java
-index b8076fc3f..9c78f18f6 100644
 --- a/src/main/java/org/bukkit/Server.java
 +++ b/src/main/java/org/bukkit/Server.java
 @@ -1265,6 +1265,12 @@ public interface Server extends PluginMessageRecipient {
@@ -41,7 +38,6 @@ index b8076fc3f..9c78f18f6 100644
       * Creates a PlayerProfile for the specified uuid, with name as null
       * @param uuid UUID to create profile for
 diff --git a/src/main/java/org/bukkit/command/Command.java b/src/main/java/org/bukkit/command/Command.java
-index 4a479627d..77171cd17 100644
 --- a/src/main/java/org/bukkit/command/Command.java
 +++ b/src/main/java/org/bukkit/command/Command.java
 @@ -180,7 +180,7 @@ public abstract class Command {

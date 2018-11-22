@@ -1,11 +1,9 @@
-From e39ea75f06d5a7f85143686fa4f1ebc0e8964f93 Mon Sep 17 00:00:00 2001
 From: Jedediah Smith <jedediah@silencegreys.com>
 Date: Sun, 20 Mar 2016 06:45:01 -0400
 Subject: [PATCH] Access items by EquipmentSlot
 
 
 diff --git a/src/main/java/org/bukkit/craftbukkit/inventory/CraftInventoryPlayer.java b/src/main/java/org/bukkit/craftbukkit/inventory/CraftInventoryPlayer.java
-index 6cbe069562..7b62f26d7c 100644
 --- a/src/main/java/org/bukkit/craftbukkit/inventory/CraftInventoryPlayer.java
 +++ b/src/main/java/org/bukkit/craftbukkit/inventory/CraftInventoryPlayer.java
 @@ -250,4 +250,54 @@ public class CraftInventoryPlayer extends CraftInventory implements org.bukkit.i
@@ -64,5 +62,5 @@ index 6cbe069562..7b62f26d7c 100644
 +    // Paper end
  }
 -- 
-2.19.0
+2.19.1
 

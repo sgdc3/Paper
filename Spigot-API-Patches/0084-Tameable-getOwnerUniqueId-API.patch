@@ -1,4 +1,3 @@
-From ba8f331145982701fc0e9dc323c75e54fb5130d2 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Sat, 24 Feb 2018 00:55:52 -0500
 Subject: [PATCH] Tameable#getOwnerUniqueId API
@@ -7,7 +6,6 @@ This is faster if all you need is the UUID, as .getOwner() will cause
 an OfflinePlayer to be loaded from disk.
 
 diff --git a/src/main/java/org/bukkit/entity/Tameable.java b/src/main/java/org/bukkit/entity/Tameable.java
-index 44497aa3..0987c1e8 100644
 --- a/src/main/java/org/bukkit/entity/Tameable.java
 +++ b/src/main/java/org/bukkit/entity/Tameable.java
 @@ -23,9 +23,21 @@ public interface Tameable extends Entity {
@@ -33,5 +31,5 @@ index 44497aa3..0987c1e8 100644
       */
      public AnimalTamer getOwner();
 -- 
-2.18.0
+2.19.1
 

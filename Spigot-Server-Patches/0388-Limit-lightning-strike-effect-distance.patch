@@ -1,11 +1,9 @@
-From 7ac07ac07ac07ac07ac07ac07ac07ac07ac07ac0 Mon Sep 17 00:00:00 2001
 From: Trigary <trigary0@gmail.com>
 Date: Fri, 14 Sep 2018 17:42:08 +0200
 Subject: [PATCH] Limit lightning strike effect distance
 
 
 diff --git a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 +++ b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 @@ -237,6 +237,30 @@ public class PaperWorldConfig {
@@ -40,7 +38,6 @@ index 7ac07ac07ac0..7ac07ac07ac0 100644
      public boolean firePhysicsEventForRedstone = false;
      private void firePhysicsEventForRedstone() {
 diff --git a/src/main/java/net/minecraft/server/EntityLightning.java b/src/main/java/net/minecraft/server/EntityLightning.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/EntityLightning.java
 +++ b/src/main/java/net/minecraft/server/EntityLightning.java
 @@ -60,6 +60,14 @@ public class EntityLightning extends EntityWeather {
@@ -68,7 +65,6 @@ index 7ac07ac07ac0..7ac07ac07ac0 100644
  
          --this.lifeTicks;
 diff --git a/src/main/java/net/minecraft/server/WorldServer.java b/src/main/java/net/minecraft/server/WorldServer.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/WorldServer.java
 +++ b/src/main/java/net/minecraft/server/WorldServer.java
 @@ -1087,7 +1087,7 @@ public class WorldServer extends World implements IAsyncTaskHandler {

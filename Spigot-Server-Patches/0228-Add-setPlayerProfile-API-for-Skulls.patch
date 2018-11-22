@@ -1,4 +1,3 @@
-From fcf7838985692e85f2b8dc0451b53c608c21e454 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Fri, 19 Jan 2018 00:36:25 -0500
 Subject: [PATCH] Add setPlayerProfile API for Skulls
@@ -7,7 +6,6 @@ This allows you to create already filled textures on Skulls to avoid texture loo
 which commonly cause rate limit issues with Mojang API
 
 diff --git a/src/main/java/org/bukkit/craftbukkit/block/CraftSkull.java b/src/main/java/org/bukkit/craftbukkit/block/CraftSkull.java
-index 110e04597..c260af11c 100644
 --- a/src/main/java/org/bukkit/craftbukkit/block/CraftSkull.java
 +++ b/src/main/java/org/bukkit/craftbukkit/block/CraftSkull.java
 @@ -1,5 +1,7 @@
@@ -48,7 +46,6 @@ index 110e04597..c260af11c 100644
      public BlockFace getRotation() {
          BlockData blockData = getBlockData();
 diff --git a/src/main/java/org/bukkit/craftbukkit/inventory/CraftMetaSkull.java b/src/main/java/org/bukkit/craftbukkit/inventory/CraftMetaSkull.java
-index 2ea2a355b..398cf958c 100644
 --- a/src/main/java/org/bukkit/craftbukkit/inventory/CraftMetaSkull.java
 +++ b/src/main/java/org/bukkit/craftbukkit/inventory/CraftMetaSkull.java
 @@ -2,6 +2,8 @@ package org.bukkit.craftbukkit.inventory;

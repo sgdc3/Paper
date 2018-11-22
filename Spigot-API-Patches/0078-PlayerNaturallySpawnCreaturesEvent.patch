@@ -1,4 +1,3 @@
-From eda3592be1d17598e7261a86c55c4377289c2721 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Sun, 14 Jan 2018 17:31:37 -0500
 Subject: [PATCH] PlayerNaturallySpawnCreaturesEvent
@@ -10,7 +9,6 @@ Also a highly more effecient way to blanket block spawns in a world
 
 diff --git a/src/main/java/com/destroystokyo/paper/event/entity/PlayerNaturallySpawnCreaturesEvent.java b/src/main/java/com/destroystokyo/paper/event/entity/PlayerNaturallySpawnCreaturesEvent.java
 new file mode 100644
-index 00000000..7c6953a7
 --- /dev/null
 +++ b/src/main/java/com/destroystokyo/paper/event/entity/PlayerNaturallySpawnCreaturesEvent.java
 @@ -0,0 +1,61 @@
@@ -76,5 +74,5 @@ index 00000000..7c6953a7
 +    }
 +}
 -- 
-2.18.0
+2.19.1
 

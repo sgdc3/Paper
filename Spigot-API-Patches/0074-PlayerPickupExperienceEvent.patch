@@ -1,4 +1,3 @@
-From 82123411c5381dec16732f3e729b996f3bfd6baa Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Tue, 19 Dec 2017 22:00:41 -0500
 Subject: [PATCH] PlayerPickupExperienceEvent
@@ -7,7 +6,6 @@ Allows plugins to cancel a player picking up an experience orb
 
 diff --git a/src/main/java/com/destroystokyo/paper/event/player/PlayerPickupExperienceEvent.java b/src/main/java/com/destroystokyo/paper/event/player/PlayerPickupExperienceEvent.java
 new file mode 100644
-index 00000000..f9ef95cd
 --- /dev/null
 +++ b/src/main/java/com/destroystokyo/paper/event/player/PlayerPickupExperienceEvent.java
 @@ -0,0 +1,76 @@
@@ -88,5 +86,5 @@ index 00000000..f9ef95cd
 +    }
 +}
 -- 
-2.18.0
+2.19.1
 

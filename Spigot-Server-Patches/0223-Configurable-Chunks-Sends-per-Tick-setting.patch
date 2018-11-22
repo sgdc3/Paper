@@ -1,4 +1,3 @@
-From 2d9f35af04abffc9bf46670bf90fae53bc5c00bd Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Mon, 1 Jan 2018 15:41:59 -0500
 Subject: [PATCH] Configurable Chunks Sends per Tick setting
@@ -8,7 +7,6 @@ Vanilla already had this limited, make it configurable.
 Limit how much exploration lags the server
 
 diff --git a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
-index 7391a4a6a8..af69342e6c 100644
 --- a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 +++ b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 @@ -379,4 +379,13 @@ public class PaperWorldConfig {
@@ -26,7 +24,6 @@ index 7391a4a6a8..af69342e6c 100644
 +    }
  }
 diff --git a/src/main/java/net/minecraft/server/PlayerChunkMap.java b/src/main/java/net/minecraft/server/PlayerChunkMap.java
-index 395b5a470f..54f31349e9 100644
 --- a/src/main/java/net/minecraft/server/PlayerChunkMap.java
 +++ b/src/main/java/net/minecraft/server/PlayerChunkMap.java
 @@ -172,7 +172,7 @@ public class PlayerChunkMap {
@@ -39,5 +36,5 @@ index 395b5a470f..54f31349e9 100644
              Iterator iterator2 = this.g.iterator();
  
 -- 
-2.19.0
+2.19.1
 

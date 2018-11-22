@@ -1,4 +1,3 @@
-From 45b4f0ecce04b20a1e43f1a985155ef35e8d33db Mon Sep 17 00:00:00 2001
 From: Shane Freeder <theboyetronic@gmail.com>
 Date: Sun, 11 Feb 2018 10:43:46 +0000
 Subject: [PATCH] Extend Player Interact cancellation
@@ -13,7 +12,6 @@ Update adjacent blocks of doors, double plants, pistons and beds
 when cancelling interaction.
 
 diff --git a/src/main/java/net/minecraft/server/PlayerInteractManager.java b/src/main/java/net/minecraft/server/PlayerInteractManager.java
-index aa7780eff5..23223e89d3 100644
 --- a/src/main/java/net/minecraft/server/PlayerInteractManager.java
 +++ b/src/main/java/net/minecraft/server/PlayerInteractManager.java
 @@ -111,6 +111,11 @@ public class PlayerInteractManager {

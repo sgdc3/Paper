@@ -1,4 +1,3 @@
-From 081c20c5cacf693b7b401bb41b09f798db036263 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Tue, 1 May 2018 20:18:54 -0400
 Subject: [PATCH] EndermanAttackPlayerEvent
@@ -8,7 +7,6 @@ Allow control over whether or not an enderman aggros a player.
 This allows you to override/extend the pumpkin/stare logic.
 
 diff --git a/src/main/java/net/minecraft/server/EntityEnderman.java b/src/main/java/net/minecraft/server/EntityEnderman.java
-index 5f636efb0c..e5ccd29a08 100644
 --- a/src/main/java/net/minecraft/server/EntityEnderman.java
 +++ b/src/main/java/net/minecraft/server/EntityEnderman.java
 @@ -135,7 +135,15 @@ public class EntityEnderman extends EntityMonster {
@@ -28,5 +26,5 @@ index 5f636efb0c..e5ccd29a08 100644
  
          if (itemstack.getItem() == Blocks.CARVED_PUMPKIN.getItem()) {
 -- 
-2.19.0
+2.19.1
 

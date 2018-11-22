@@ -1,4 +1,3 @@
-From e7c6b3cc9faa0245c366ec6c840ff76155c6a3fa Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Tue, 2 Jan 2018 00:31:26 -0500
 Subject: [PATCH] Fill Profile Property Events
@@ -11,7 +10,6 @@ If Mojang API does need to be hit, event fire so you can get the results.
 This is useful for implementing a ProfileCache for Player Skulls
 
 diff --git a/src/main/java/com/destroystokyo/paper/profile/PaperMinecraftSessionService.java b/src/main/java/com/destroystokyo/paper/profile/PaperMinecraftSessionService.java
-index 4b2a67423f..61cfdf73c8 100644
 --- a/src/main/java/com/destroystokyo/paper/profile/PaperMinecraftSessionService.java
 +++ b/src/main/java/com/destroystokyo/paper/profile/PaperMinecraftSessionService.java
 @@ -1,5 +1,7 @@

@@ -1,4 +1,3 @@
-From 1d72b4d218c0c70b0a95059d93c1ae6d5de73fb6 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Sat, 9 Dec 2017 12:40:25 -0500
 Subject: [PATCH] Display warning on deprecated recipe API
@@ -10,7 +9,6 @@ on the players login.
 Plugin authors need to define a key to keep it consistent between server restarts.
 
 diff --git a/src/main/java/org/bukkit/inventory/ShapedRecipe.java b/src/main/java/org/bukkit/inventory/ShapedRecipe.java
-index 90d6d50cd..80af6cf52 100644
 --- a/src/main/java/org/bukkit/inventory/ShapedRecipe.java
 +++ b/src/main/java/org/bukkit/inventory/ShapedRecipe.java
 @@ -25,6 +25,7 @@ public class ShapedRecipe implements Recipe, Keyed {
@@ -22,7 +20,6 @@ index 90d6d50cd..80af6cf52 100644
      }
  
 diff --git a/src/main/java/org/bukkit/inventory/ShapelessRecipe.java b/src/main/java/org/bukkit/inventory/ShapelessRecipe.java
-index ea359c540..7347e7464 100644
 --- a/src/main/java/org/bukkit/inventory/ShapelessRecipe.java
 +++ b/src/main/java/org/bukkit/inventory/ShapelessRecipe.java
 @@ -26,6 +26,7 @@ public class ShapelessRecipe implements Recipe, Keyed {
@@ -34,5 +31,5 @@ index ea359c540..7347e7464 100644
      }
  
 -- 
-2.18.0
+2.19.1
 

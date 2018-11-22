@@ -1,4 +1,3 @@
-From 8a1594063a6ad06f391b3614c7c45ae24342e8b5 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Mon, 4 Jun 2018 20:39:20 -0400
 Subject: [PATCH] Allow spawning Item entities with World.spawnEntity
@@ -8,7 +7,6 @@ This API has more capabilities than .dropItem with the Consumer function
 Item can be set inside of the Consumer pre spawn function.
 
 diff --git a/src/main/java/org/bukkit/craftbukkit/CraftWorld.java b/src/main/java/org/bukkit/craftbukkit/CraftWorld.java
-index 84bde3ef20..e127cc91ef 100644
 --- a/src/main/java/org/bukkit/craftbukkit/CraftWorld.java
 +++ b/src/main/java/org/bukkit/craftbukkit/CraftWorld.java
 @@ -1055,6 +1055,10 @@ public class CraftWorld implements World {

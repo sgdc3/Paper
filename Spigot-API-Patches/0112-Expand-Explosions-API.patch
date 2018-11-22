@@ -1,4 +1,3 @@
-From 73be070d77dd79f210bf045c6ec01bf2ecf72f18 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Tue, 19 Dec 2017 16:24:42 -0500
 Subject: [PATCH] Expand Explosions API
@@ -6,7 +5,6 @@ Subject: [PATCH] Expand Explosions API
 Add Entity as a Source capability, and add more API choices, and on Location.
 
 diff --git a/src/main/java/org/bukkit/Location.java b/src/main/java/org/bukkit/Location.java
-index 162a76e8..056a4d6b 100644
 --- a/src/main/java/org/bukkit/Location.java
 +++ b/src/main/java/org/bukkit/Location.java
 @@ -745,6 +745,87 @@ public class Location implements Cloneable, ConfigurationSerializable {
@@ -98,7 +96,6 @@ index 162a76e8..056a4d6b 100644
      @Override
      public boolean equals(Object obj) {
 diff --git a/src/main/java/org/bukkit/World.java b/src/main/java/org/bukkit/World.java
-index 1f63eba8..e83b2ac7 100644
 --- a/src/main/java/org/bukkit/World.java
 +++ b/src/main/java/org/bukkit/World.java
 @@ -1115,6 +1115,102 @@ public interface World extends PluginMessageRecipient, Metadatable {

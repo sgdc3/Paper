@@ -1,4 +1,3 @@
-From fb17a0382199e08478fafa054ffaba06dcfce1fa Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Thu, 19 Jul 2018 01:08:05 -0400
 Subject: [PATCH] Re-add vanilla entity warnings for duplicates
@@ -8,7 +7,6 @@ These are a critical sign that somethin went wrong, and you've lost some data...
 We should kind of know about these things you know.
 
 diff --git a/src/main/java/net/minecraft/server/WorldServer.java b/src/main/java/net/minecraft/server/WorldServer.java
-index b939c31b23..27278078e4 100644
 --- a/src/main/java/net/minecraft/server/WorldServer.java
 +++ b/src/main/java/net/minecraft/server/WorldServer.java
 @@ -986,7 +986,8 @@ public class WorldServer extends World implements IAsyncTaskHandler {
@@ -22,5 +20,5 @@ index b939c31b23..27278078e4 100644
                      }
  
 -- 
-2.19.0
+2.19.1
 

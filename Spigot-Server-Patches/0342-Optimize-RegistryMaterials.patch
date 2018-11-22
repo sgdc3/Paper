@@ -1,4 +1,3 @@
-From d1a99aa3a770edc860e74ec16778082dc0888040 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Sun, 26 Aug 2018 20:49:50 -0400
 Subject: [PATCH] Optimize RegistryMaterials
@@ -8,7 +7,6 @@ Use larger initial sizes to increase bucket capacity on the BiMap
 BiMap.get was seen to be using a good bit of CPU time.
 
 diff --git a/src/main/java/net/minecraft/server/RegistryMaterials.java b/src/main/java/net/minecraft/server/RegistryMaterials.java
-index 83ce386e05..a47110bba8 100644
 --- a/src/main/java/net/minecraft/server/RegistryMaterials.java
 +++ b/src/main/java/net/minecraft/server/RegistryMaterials.java
 @@ -13,8 +13,8 @@ import org.apache.logging.log4j.Logger;
@@ -23,5 +21,5 @@ index 83ce386e05..a47110bba8 100644
      private int x;
  
 -- 
-2.19.0
+2.19.1
 

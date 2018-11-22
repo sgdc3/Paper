@@ -1,11 +1,9 @@
-From 2eeade3b60ffa9d2da91ae718e6c0ec98986f926 Mon Sep 17 00:00:00 2001
 From: Joseph Hirschfeld <joe@ibj.io>
 Date: Thu, 3 Mar 2016 02:39:54 -0600
 Subject: [PATCH] Change implementation of (tile)entity removal list
 
 
 diff --git a/src/main/java/net/minecraft/server/World.java b/src/main/java/net/minecraft/server/World.java
-index 352a7f25a7..65e84b666f 100644
 --- a/src/main/java/net/minecraft/server/World.java
 +++ b/src/main/java/net/minecraft/server/World.java
 @@ -73,11 +73,11 @@ public abstract class World implements IEntityAccess, GeneratorAccess, IIBlockAc
@@ -53,5 +51,5 @@ index 352a7f25a7..65e84b666f 100644
          this.g.clear();
          this.p_();
 -- 
-2.19.0
+2.19.1
 

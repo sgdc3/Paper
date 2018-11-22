@@ -1,11 +1,9 @@
-From 8267ebfcf1993dcff3c0e19bc3552724230d7873 Mon Sep 17 00:00:00 2001
 From: BillyGalbreath <Blake.Galbreath@GMail.com>
 Date: Thu, 2 Aug 2018 08:44:35 -0500
 Subject: [PATCH] Add hand to bucket events
 
 
 diff --git a/src/main/java/net/minecraft/server/EntityCow.java b/src/main/java/net/minecraft/server/EntityCow.java
-index 5f4f107d5a..b2e50f8532 100644
 --- a/src/main/java/net/minecraft/server/EntityCow.java
 +++ b/src/main/java/net/minecraft/server/EntityCow.java
 @@ -65,7 +65,7 @@ public class EntityCow extends EntityAnimal {
@@ -18,7 +16,6 @@ index 5f4f107d5a..b2e50f8532 100644
              if (event.isCancelled()) {
                  return false;
 diff --git a/src/main/java/net/minecraft/server/ItemBucket.java b/src/main/java/net/minecraft/server/ItemBucket.java
-index b63da71512..b0dd30dd12 100644
 --- a/src/main/java/net/minecraft/server/ItemBucket.java
 +++ b/src/main/java/net/minecraft/server/ItemBucket.java
 @@ -35,7 +35,7 @@ public class ItemBucket extends Item {
@@ -67,7 +64,6 @@ index b63da71512..b0dd30dd12 100644
                          ((EntityPlayer) entityhuman).playerConnection.sendPacket(new PacketPlayOutBlockChange(world, blockposition)); // SPIGOT-4238: needed when looking through entity
                          // TODO: inventory not updated
 diff --git a/src/main/java/org/bukkit/craftbukkit/event/CraftEventFactory.java b/src/main/java/org/bukkit/craftbukkit/event/CraftEventFactory.java
-index f5fa6b13e1..396a37f69b 100644
 --- a/src/main/java/org/bukkit/craftbukkit/event/CraftEventFactory.java
 +++ b/src/main/java/org/bukkit/craftbukkit/event/CraftEventFactory.java
 @@ -228,6 +228,20 @@ public class CraftEventFactory {

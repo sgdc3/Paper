@@ -1,4 +1,3 @@
-From 39b86fa69e8d2d6404b044b90c923f766294834e Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Wed, 20 Dec 2017 17:36:49 -0500
 Subject: [PATCH] Ability to apply mending to XP API
@@ -10,7 +9,6 @@ of giving the player experience points.
 Both an API To standalone mend, and apply mending logic to .giveExp has been added.
 
 diff --git a/src/main/java/net/minecraft/server/EnchantmentManager.java b/src/main/java/net/minecraft/server/EnchantmentManager.java
-index fd6df39f17..f03aef2fed 100644
 --- a/src/main/java/net/minecraft/server/EnchantmentManager.java
 +++ b/src/main/java/net/minecraft/server/EnchantmentManager.java
 @@ -223,6 +223,7 @@ public class EnchantmentManager {
@@ -22,7 +20,6 @@ index fd6df39f17..f03aef2fed 100644
          List<ItemStack> list = enchantment.a(entityliving);// Paper - decompile fix
          if (list.isEmpty()) {
 diff --git a/src/main/java/net/minecraft/server/Enchantments.java b/src/main/java/net/minecraft/server/Enchantments.java
-index 8cfb38b826..44b2d428b3 100644
 --- a/src/main/java/net/minecraft/server/Enchantments.java
 +++ b/src/main/java/net/minecraft/server/Enchantments.java
 @@ -35,7 +35,7 @@ public class Enchantments {
@@ -35,7 +32,6 @@ index 8cfb38b826..44b2d428b3 100644
  
      @Nullable
 diff --git a/src/main/java/net/minecraft/server/EntityExperienceOrb.java b/src/main/java/net/minecraft/server/EntityExperienceOrb.java
-index dcef63bb1f..53cfc10017 100644
 --- a/src/main/java/net/minecraft/server/EntityExperienceOrb.java
 +++ b/src/main/java/net/minecraft/server/EntityExperienceOrb.java
 @@ -246,10 +246,12 @@ public class EntityExperienceOrb extends Entity {
@@ -52,7 +48,6 @@ index dcef63bb1f..53cfc10017 100644
          return i * 2;
      }
 diff --git a/src/main/java/org/bukkit/craftbukkit/entity/CraftPlayer.java b/src/main/java/org/bukkit/craftbukkit/entity/CraftPlayer.java
-index 0d76a42997..1c40f17ce9 100644
 --- a/src/main/java/org/bukkit/craftbukkit/entity/CraftPlayer.java
 +++ b/src/main/java/org/bukkit/craftbukkit/entity/CraftPlayer.java
 @@ -1023,8 +1023,39 @@ public class CraftPlayer extends CraftHumanEntity implements Player {
@@ -97,5 +92,5 @@ index 0d76a42997..1c40f17ce9 100644
      }
  
 -- 
-2.19.0
+2.19.1
 

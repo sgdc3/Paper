@@ -1,11 +1,9 @@
-From 12dd50f4836a33df93b0ab65175a5cdf1f842e90 Mon Sep 17 00:00:00 2001
 From: Zach Brown <zach.brown@destroystokyo.com>
 Date: Tue, 1 Mar 2016 13:14:11 -0600
 Subject: [PATCH] Configurable fishing time ranges
 
 
 diff --git a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
-index a3c0d9159..cacf58607 100644
 --- a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 +++ b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 @@ -79,4 +79,12 @@ public class PaperWorldConfig {
@@ -22,7 +20,6 @@ index a3c0d9159..cacf58607 100644
 +    }
  }
 diff --git a/src/main/java/net/minecraft/server/EntityFishingHook.java b/src/main/java/net/minecraft/server/EntityFishingHook.java
-index a9bd59418..7c119282b 100644
 --- a/src/main/java/net/minecraft/server/EntityFishingHook.java
 +++ b/src/main/java/net/minecraft/server/EntityFishingHook.java
 @@ -386,7 +386,7 @@ public class EntityFishingHook extends Entity {
@@ -35,5 +32,5 @@ index a9bd59418..7c119282b 100644
              }
          }
 -- 
-2.18.0
+2.19.1
 

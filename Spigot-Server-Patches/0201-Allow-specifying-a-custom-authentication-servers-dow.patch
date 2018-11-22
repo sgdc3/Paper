@@ -1,4 +1,3 @@
-From 5adcf0eb891dd0cb7fd3980b018f32a89f05f63b Mon Sep 17 00:00:00 2001
 From: kashike <kashike@vq.lc>
 Date: Thu, 17 Aug 2017 16:08:20 -0700
 Subject: [PATCH] Allow specifying a custom "authentication servers down" kick
@@ -6,7 +5,6 @@ Subject: [PATCH] Allow specifying a custom "authentication servers down" kick
 
 
 diff --git a/src/main/java/com/destroystokyo/paper/PaperConfig.java b/src/main/java/com/destroystokyo/paper/PaperConfig.java
-index 963096fb3..a499578db 100644
 --- a/src/main/java/com/destroystokyo/paper/PaperConfig.java
 +++ b/src/main/java/com/destroystokyo/paper/PaperConfig.java
 @@ -1,5 +1,6 @@
@@ -27,7 +25,6 @@ index 963096fb3..a499578db 100644
 +    }
  }
 diff --git a/src/main/java/net/minecraft/server/LoginListener.java b/src/main/java/net/minecraft/server/LoginListener.java
-index 8bbea9624..10c82107d 100644
 --- a/src/main/java/net/minecraft/server/LoginListener.java
 +++ b/src/main/java/net/minecraft/server/LoginListener.java
 @@ -240,6 +240,10 @@ public class LoginListener implements PacketLoginInListener, ITickable {

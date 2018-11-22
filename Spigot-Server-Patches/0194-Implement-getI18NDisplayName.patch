@@ -1,4 +1,3 @@
-From b1af484d9a636ef9e977a8584f4c3a9f08f54ed0 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Wed, 4 May 2016 23:59:38 -0400
 Subject: [PATCH] Implement getI18NDisplayName
@@ -8,7 +7,6 @@ Currently the server only supports the English language. To override this,
 You must replace the language file embedded in the server jar.
 
 diff --git a/src/main/java/net/minecraft/server/LocaleLanguage.java b/src/main/java/net/minecraft/server/LocaleLanguage.java
-index 0648c76a0..bea146630 100644
 --- a/src/main/java/net/minecraft/server/LocaleLanguage.java
 +++ b/src/main/java/net/minecraft/server/LocaleLanguage.java
 @@ -39,10 +39,12 @@ public class LocaleLanguage {
@@ -25,7 +23,6 @@ index 0648c76a0..bea146630 100644
          return this.c(s);
      }
 diff --git a/src/main/java/org/bukkit/craftbukkit/inventory/CraftItemFactory.java b/src/main/java/org/bukkit/craftbukkit/inventory/CraftItemFactory.java
-index f5fa58d6c..3a6e6f687 100644
 --- a/src/main/java/org/bukkit/craftbukkit/inventory/CraftItemFactory.java
 +++ b/src/main/java/org/bukkit/craftbukkit/inventory/CraftItemFactory.java
 @@ -299,5 +299,18 @@ public final class CraftItemFactory implements ItemFactory {

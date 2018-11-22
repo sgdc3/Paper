@@ -1,11 +1,9 @@
-From 36f2224286f0b66b0230f0ad4cfd914c603d8488 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Sat, 6 Oct 2018 21:14:29 -0400
 Subject: [PATCH] Material API additions
 
 
 diff --git a/src/main/java/org/bukkit/Material.java b/src/main/java/org/bukkit/Material.java
-index 14cae61fb..393024343 100644
 --- a/src/main/java/org/bukkit/Material.java
 +++ b/src/main/java/org/bukkit/Material.java
 @@ -72,6 +72,7 @@ import org.bukkit.material.MaterialData;

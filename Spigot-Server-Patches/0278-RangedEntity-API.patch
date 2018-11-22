@@ -1,4 +1,3 @@
-From 27094bee52b30dc3ffbda02d5db78a8f77ba9d6f Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Tue, 26 Jun 2018 22:00:49 -0400
 Subject: [PATCH] RangedEntity API
@@ -8,7 +7,6 @@ and to perform an attack.
 
 diff --git a/src/main/java/com/destroystokyo/paper/entity/CraftRangedEntity.java b/src/main/java/com/destroystokyo/paper/entity/CraftRangedEntity.java
 new file mode 100644
-index 000000000..696660b08
 --- /dev/null
 +++ b/src/main/java/com/destroystokyo/paper/entity/CraftRangedEntity.java
 @@ -0,0 +1,19 @@
@@ -32,7 +30,6 @@ index 000000000..696660b08
 +    }
 +}
 diff --git a/src/main/java/net/minecraft/server/IRangedEntity.java b/src/main/java/net/minecraft/server/IRangedEntity.java
-index 1b06ce853..94533d19a 100644
 --- a/src/main/java/net/minecraft/server/IRangedEntity.java
 +++ b/src/main/java/net/minecraft/server/IRangedEntity.java
 @@ -1,7 +1,7 @@
@@ -46,7 +43,6 @@ index 1b06ce853..94533d19a 100644
 +    void s(boolean var1); default void setChargingAttack(boolean flag) { s(flag); } // Paper OBF HELPER
  }
 diff --git a/src/main/java/org/bukkit/craftbukkit/entity/CraftIllusioner.java b/src/main/java/org/bukkit/craftbukkit/entity/CraftIllusioner.java
-index 2ec1af8be..f31d3eed3 100644
 --- a/src/main/java/org/bukkit/craftbukkit/entity/CraftIllusioner.java
 +++ b/src/main/java/org/bukkit/craftbukkit/entity/CraftIllusioner.java
 @@ -1,11 +1,12 @@
@@ -64,7 +60,6 @@ index 2ec1af8be..f31d3eed3 100644
      public CraftIllusioner(CraftServer server, EntityIllagerIllusioner entity) {
          super(server, entity);
 diff --git a/src/main/java/org/bukkit/craftbukkit/entity/CraftLlama.java b/src/main/java/org/bukkit/craftbukkit/entity/CraftLlama.java
-index 23ab78da1..3f94c5a92 100644
 --- a/src/main/java/org/bukkit/craftbukkit/entity/CraftLlama.java
 +++ b/src/main/java/org/bukkit/craftbukkit/entity/CraftLlama.java
 @@ -1,5 +1,6 @@
@@ -84,7 +79,6 @@ index 23ab78da1..3f94c5a92 100644
      public CraftLlama(CraftServer server, EntityLlama entity) {
          super(server, entity);
 diff --git a/src/main/java/org/bukkit/craftbukkit/entity/CraftSkeleton.java b/src/main/java/org/bukkit/craftbukkit/entity/CraftSkeleton.java
-index 4ed89615f..4fa5e84ea 100644
 --- a/src/main/java/org/bukkit/craftbukkit/entity/CraftSkeleton.java
 +++ b/src/main/java/org/bukkit/craftbukkit/entity/CraftSkeleton.java
 @@ -1,12 +1,13 @@
@@ -103,7 +97,6 @@ index 4ed89615f..4fa5e84ea 100644
      public CraftSkeleton(CraftServer server, EntitySkeletonAbstract entity) {
          super(server, entity);
 diff --git a/src/main/java/org/bukkit/craftbukkit/entity/CraftSnowman.java b/src/main/java/org/bukkit/craftbukkit/entity/CraftSnowman.java
-index 0349f0a57..2e3d8fcdf 100644
 --- a/src/main/java/org/bukkit/craftbukkit/entity/CraftSnowman.java
 +++ b/src/main/java/org/bukkit/craftbukkit/entity/CraftSnowman.java
 @@ -1,11 +1,12 @@
@@ -121,7 +114,6 @@ index 0349f0a57..2e3d8fcdf 100644
          super(server, entity);
      }
 diff --git a/src/main/java/org/bukkit/craftbukkit/entity/CraftWitch.java b/src/main/java/org/bukkit/craftbukkit/entity/CraftWitch.java
-index c08833cb7..f25998eb6 100644
 --- a/src/main/java/org/bukkit/craftbukkit/entity/CraftWitch.java
 +++ b/src/main/java/org/bukkit/craftbukkit/entity/CraftWitch.java
 @@ -1,11 +1,12 @@
@@ -139,7 +131,6 @@ index c08833cb7..f25998eb6 100644
          super(server, entity);
      }
 diff --git a/src/main/java/org/bukkit/craftbukkit/entity/CraftWither.java b/src/main/java/org/bukkit/craftbukkit/entity/CraftWither.java
-index 2b00b3772..effcfa2d8 100644
 --- a/src/main/java/org/bukkit/craftbukkit/entity/CraftWither.java
 +++ b/src/main/java/org/bukkit/craftbukkit/entity/CraftWither.java
 @@ -1,5 +1,6 @@

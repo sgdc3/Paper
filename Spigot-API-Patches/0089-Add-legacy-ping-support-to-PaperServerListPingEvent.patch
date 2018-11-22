@@ -1,4 +1,3 @@
-From e730e57eded25def56fa85f4d51aa44cbcc5a135 Mon Sep 17 00:00:00 2001
 From: Minecrell <minecrell@minecrell.net>
 Date: Wed, 11 Oct 2017 19:30:20 +0200
 Subject: [PATCH] Add legacy ping support to PaperServerListPingEvent
@@ -8,7 +7,6 @@ client that does not support all of the features provided in the
 event.
 
 diff --git a/src/main/java/com/destroystokyo/paper/network/StatusClient.java b/src/main/java/com/destroystokyo/paper/network/StatusClient.java
-index 517d1523..ffda9f6a 100644
 --- a/src/main/java/com/destroystokyo/paper/network/StatusClient.java
 +++ b/src/main/java/com/destroystokyo/paper/network/StatusClient.java
 @@ -10,4 +10,16 @@ import com.destroystokyo.paper.event.server.PaperServerListPingEvent;
@@ -29,5 +27,5 @@ index 517d1523..ffda9f6a 100644
 +
  }
 -- 
-2.18.0
+2.19.1
 

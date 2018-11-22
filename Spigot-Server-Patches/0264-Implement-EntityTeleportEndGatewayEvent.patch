@@ -1,11 +1,9 @@
-From 9aebe1e759505f810a8893bce3ea74aa46d27df6 Mon Sep 17 00:00:00 2001
 From: Shane Freeder <theboyetronic@gmail.com>
 Date: Sat, 9 Jun 2018 14:08:39 +0200
 Subject: [PATCH] Implement EntityTeleportEndGatewayEvent
 
 
 diff --git a/src/main/java/net/minecraft/server/TileEntityEndGateway.java b/src/main/java/net/minecraft/server/TileEntityEndGateway.java
-index b36dcb4d7d..268e4996bc 100644
 --- a/src/main/java/net/minecraft/server/TileEntityEndGateway.java
 +++ b/src/main/java/net/minecraft/server/TileEntityEndGateway.java
 @@ -138,8 +138,19 @@ public class TileEntityEndGateway extends TileEntityEnderPortal implements ITick
@@ -30,5 +28,5 @@ index b36dcb4d7d..268e4996bc 100644
  
              this.f();
 -- 
-2.19.0
+2.19.1
 

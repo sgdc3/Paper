@@ -1,4 +1,3 @@
-From 7ac07ac07ac07ac07ac07ac07ac07ac07ac07ac0 Mon Sep 17 00:00:00 2001
 From: Zach Brown <zach@zachbr.io>
 Date: Wed, 3 Oct 2018 20:09:18 -0400
 Subject: [PATCH] Hook into CB plugin rewrites
@@ -8,7 +7,6 @@ our own relocation. Also lets us rewrite NMS calls for when we're
 debugging in an IDE pre-relocate.
 
 diff --git a/src/main/java/org/bukkit/craftbukkit/util/Commodore.java b/src/main/java/org/bukkit/craftbukkit/util/Commodore.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/org/bukkit/craftbukkit/util/Commodore.java
 +++ b/src/main/java/org/bukkit/craftbukkit/util/Commodore.java
 @@ -6,7 +6,9 @@ import java.io.FileOutputStream;

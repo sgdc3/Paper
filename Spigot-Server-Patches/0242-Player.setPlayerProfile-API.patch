@@ -1,4 +1,3 @@
-From a347b25b7293f1b2eb1740a18840d7ae893bcd18 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Sun, 18 Mar 2018 12:29:48 -0400
 Subject: [PATCH] Player.setPlayerProfile API
@@ -6,7 +5,6 @@ Subject: [PATCH] Player.setPlayerProfile API
 This can be useful for changing name or skins after a player has logged in.
 
 diff --git a/src/main/java/net/minecraft/server/EntityHuman.java b/src/main/java/net/minecraft/server/EntityHuman.java
-index b9e6a18293..73998e5a75 100644
 --- a/src/main/java/net/minecraft/server/EntityHuman.java
 +++ b/src/main/java/net/minecraft/server/EntityHuman.java
 @@ -66,7 +66,7 @@ public abstract class EntityHuman extends EntityLiving {
@@ -19,7 +17,6 @@ index b9e6a18293..73998e5a75 100644
      private final ItemCooldown ce;
      @Nullable
 diff --git a/src/main/java/net/minecraft/server/LoginListener.java b/src/main/java/net/minecraft/server/LoginListener.java
-index ab85fd9a6e..5778a5201d 100644
 --- a/src/main/java/net/minecraft/server/LoginListener.java
 +++ b/src/main/java/net/minecraft/server/LoginListener.java
 @@ -38,7 +38,7 @@ public class LoginListener implements PacketLoginInListener, ITickable {
@@ -48,7 +45,6 @@ index ab85fd9a6e..5778a5201d 100644
                              uniqueId = i.getId();
                              // Paper end
 diff --git a/src/main/java/org/bukkit/craftbukkit/entity/CraftPlayer.java b/src/main/java/org/bukkit/craftbukkit/entity/CraftPlayer.java
-index 45f7a4143f..b1cba904e4 100644
 --- a/src/main/java/org/bukkit/craftbukkit/entity/CraftPlayer.java
 +++ b/src/main/java/org/bukkit/craftbukkit/entity/CraftPlayer.java
 @@ -1,6 +1,8 @@

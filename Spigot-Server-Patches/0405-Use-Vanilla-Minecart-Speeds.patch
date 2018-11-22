@@ -1,4 +1,3 @@
-From 34af573235b8c48ef22c9c32a4d3af78aa1cb27c Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Thu, 8 Nov 2018 21:33:09 -0500
 Subject: [PATCH] Use Vanilla Minecart Speeds
@@ -6,7 +5,6 @@ Subject: [PATCH] Use Vanilla Minecart Speeds
 CraftBukkit changed the values on flying speed, restore back to vanilla
 
 diff --git a/src/main/java/net/minecraft/server/EntityMinecartAbstract.java b/src/main/java/net/minecraft/server/EntityMinecartAbstract.java
-index 932fbff7c..7fa1bceec 100644
 --- a/src/main/java/net/minecraft/server/EntityMinecartAbstract.java
 +++ b/src/main/java/net/minecraft/server/EntityMinecartAbstract.java
 @@ -39,9 +39,9 @@ public abstract class EntityMinecartAbstract extends Entity implements INamableT

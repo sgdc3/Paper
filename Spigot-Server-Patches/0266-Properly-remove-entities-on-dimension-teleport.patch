@@ -1,4 +1,3 @@
-From 7ac07ac07ac07ac07ac07ac07ac07ac07ac07ac0 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Sun, 10 Jun 2018 20:04:42 -0400
 Subject: [PATCH] Properly remove entities on dimension teleport
@@ -22,7 +21,6 @@ requirement, but plugins (such as my own) use this method to
 trigger a "reload" of the entity on the client.
 
 diff --git a/src/main/java/net/minecraft/server/Entity.java b/src/main/java/net/minecraft/server/Entity.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/Entity.java
 +++ b/src/main/java/net/minecraft/server/Entity.java
 @@ -2595,7 +2595,7 @@ public abstract class Entity implements INamableTileEntity, ICommandListener, Ke
@@ -35,7 +33,6 @@ index 7ac07ac07ac0..7ac07ac07ac0 100644
              this.world.methodProfiler.a("reposition");
              /* CraftBukkit start - Handled in calculateTarget
 diff --git a/src/main/java/net/minecraft/server/WorldServer.java b/src/main/java/net/minecraft/server/WorldServer.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/WorldServer.java
 +++ b/src/main/java/net/minecraft/server/WorldServer.java
 @@ -1020,6 +1020,7 @@ public class WorldServer extends World implements IAsyncTaskHandler {

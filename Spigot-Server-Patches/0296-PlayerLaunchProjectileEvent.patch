@@ -1,11 +1,9 @@
-From 1e69a35c0ca2212f2b3576237f2e20481064ecc9 Mon Sep 17 00:00:00 2001
 From: BillyGalbreath <Blake.Galbreath@GMail.com>
 Date: Sat, 21 Jul 2018 03:11:03 -0500
 Subject: [PATCH] PlayerLaunchProjectileEvent
 
 
 diff --git a/src/main/java/net/minecraft/server/ItemEgg.java b/src/main/java/net/minecraft/server/ItemEgg.java
-index adc38763b9..776c86f1fe 100644
 --- a/src/main/java/net/minecraft/server/ItemEgg.java
 +++ b/src/main/java/net/minecraft/server/ItemEgg.java
 @@ -7,15 +7,34 @@ public class ItemEgg extends Item {
@@ -49,7 +47,6 @@ index adc38763b9..776c86f1fe 100644
  
          entityhuman.b(StatisticList.ITEM_USED.b(this));
 diff --git a/src/main/java/net/minecraft/server/ItemEnderPearl.java b/src/main/java/net/minecraft/server/ItemEnderPearl.java
-index 876384f37b..8b8bc8ec1c 100644
 --- a/src/main/java/net/minecraft/server/ItemEnderPearl.java
 +++ b/src/main/java/net/minecraft/server/ItemEnderPearl.java
 @@ -14,7 +14,19 @@ public class ItemEnderPearl extends Item {
@@ -97,7 +94,6 @@ index 876384f37b..8b8bc8ec1c 100644
          entityhuman.b(StatisticList.ITEM_USED.b(this));
          return new InteractionResultWrapper(EnumInteractionResult.SUCCESS, itemstack);
 diff --git a/src/main/java/net/minecraft/server/ItemExpBottle.java b/src/main/java/net/minecraft/server/ItemExpBottle.java
-index b167c54417..42a0329c29 100644
 --- a/src/main/java/net/minecraft/server/ItemExpBottle.java
 +++ b/src/main/java/net/minecraft/server/ItemExpBottle.java
 @@ -7,15 +7,34 @@ public class ItemExpBottle extends Item {
@@ -141,7 +137,6 @@ index b167c54417..42a0329c29 100644
  
          entityhuman.b(StatisticList.ITEM_USED.b(this));
 diff --git a/src/main/java/net/minecraft/server/ItemLingeringPotion.java b/src/main/java/net/minecraft/server/ItemLingeringPotion.java
-index ab7807d832..46c64c760f 100644
 --- a/src/main/java/net/minecraft/server/ItemLingeringPotion.java
 +++ b/src/main/java/net/minecraft/server/ItemLingeringPotion.java
 @@ -7,12 +7,37 @@ public class ItemLingeringPotion extends ItemPotion {
@@ -186,7 +181,6 @@ index ab7807d832..46c64c760f 100644
  
          entityhuman.b(StatisticList.ITEM_USED.b(this));
 diff --git a/src/main/java/net/minecraft/server/ItemSnowball.java b/src/main/java/net/minecraft/server/ItemSnowball.java
-index 332145c32b..5c23c9ae0c 100644
 --- a/src/main/java/net/minecraft/server/ItemSnowball.java
 +++ b/src/main/java/net/minecraft/server/ItemSnowball.java
 @@ -21,15 +21,23 @@ public class ItemSnowball extends Item {
@@ -219,7 +213,6 @@ index 332145c32b..5c23c9ae0c 100644
          // CraftBukkit end
  
 diff --git a/src/main/java/net/minecraft/server/ItemSplashPotion.java b/src/main/java/net/minecraft/server/ItemSplashPotion.java
-index 426b42a12c..a4e2f70c7c 100644
 --- a/src/main/java/net/minecraft/server/ItemSplashPotion.java
 +++ b/src/main/java/net/minecraft/server/ItemSplashPotion.java
 @@ -7,12 +7,36 @@ public class ItemSplashPotion extends ItemPotion {
@@ -263,5 +256,5 @@ index 426b42a12c..a4e2f70c7c 100644
  
          entityhuman.b(StatisticList.ITEM_USED.b(this));
 -- 
-2.19.0
+2.19.1
 

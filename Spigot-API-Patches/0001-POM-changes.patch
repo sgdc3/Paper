@@ -1,11 +1,9 @@
-From 7ac07ac07ac07ac07ac07ac07ac07ac07ac07ac0 Mon Sep 17 00:00:00 2001
 From: Zach Brown <zach.brown@destroystokyo.com>
 Date: Tue, 1 Mar 2016 00:16:08 +0100
 Subject: [PATCH] POM changes
 
 
 diff --git a/pom.xml b/pom.xml
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/pom.xml
 +++ b/pom.xml
 @@ -3,37 +3,36 @@

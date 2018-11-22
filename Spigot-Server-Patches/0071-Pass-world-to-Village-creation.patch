@@ -1,4 +1,3 @@
-From 4794e17198632431883eba3787fdbbf99df2f43b Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Sat, 19 Mar 2016 15:16:54 -0400
 Subject: [PATCH] Pass world to Village creation
@@ -6,7 +5,6 @@ Subject: [PATCH] Pass world to Village creation
 fixes NPE bug #95
 
 diff --git a/src/main/java/net/minecraft/server/PersistentVillage.java b/src/main/java/net/minecraft/server/PersistentVillage.java
-index d58f6b2a86..d14a9e3a3e 100644
 --- a/src/main/java/net/minecraft/server/PersistentVillage.java
 +++ b/src/main/java/net/minecraft/server/PersistentVillage.java
 @@ -202,7 +202,7 @@ public class PersistentVillage extends PersistentBase {
@@ -19,7 +17,6 @@ index d58f6b2a86..d14a9e3a3e 100644
              this.villages.add(village);
          }
 diff --git a/src/main/java/net/minecraft/server/Village.java b/src/main/java/net/minecraft/server/Village.java
-index f87e8e05af..bda67faefe 100644
 --- a/src/main/java/net/minecraft/server/Village.java
 +++ b/src/main/java/net/minecraft/server/Village.java
 @@ -24,7 +24,7 @@ public class Village {
@@ -32,5 +29,5 @@ index f87e8e05af..bda67faefe 100644
          this.d = BlockPosition.ZERO;
          this.j = Maps.newHashMap();
 -- 
-2.19.0
+2.19.1
 

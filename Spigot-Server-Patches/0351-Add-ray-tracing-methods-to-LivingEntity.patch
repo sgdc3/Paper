@@ -1,11 +1,9 @@
-From 46984ce90bf3c3a444595575bfc6ca250977c1cc Mon Sep 17 00:00:00 2001
 From: BillyGalbreath <Blake.Galbreath@GMail.com>
 Date: Mon, 3 Sep 2018 18:20:03 -0500
 Subject: [PATCH] Add ray tracing methods to LivingEntity
 
 
 diff --git a/src/main/java/net/minecraft/server/EntityLiving.java b/src/main/java/net/minecraft/server/EntityLiving.java
-index 21d32178c..2aedfa808 100644
 --- a/src/main/java/net/minecraft/server/EntityLiving.java
 +++ b/src/main/java/net/minecraft/server/EntityLiving.java
 @@ -2815,6 +2815,22 @@ public abstract class EntityLiving extends Entity {
@@ -32,7 +30,6 @@ index 21d32178c..2aedfa808 100644
  
      public int getShieldBlockingDelay() {
 diff --git a/src/main/java/net/minecraft/server/MovingObjectPosition.java b/src/main/java/net/minecraft/server/MovingObjectPosition.java
-index 6d5dbe89a..a31f9f607 100644
 --- a/src/main/java/net/minecraft/server/MovingObjectPosition.java
 +++ b/src/main/java/net/minecraft/server/MovingObjectPosition.java
 @@ -28,6 +28,7 @@ public class MovingObjectPosition {
@@ -44,7 +41,6 @@ index 6d5dbe89a..a31f9f607 100644
          return this.e;
      }
 diff --git a/src/main/java/org/bukkit/craftbukkit/entity/CraftLivingEntity.java b/src/main/java/org/bukkit/craftbukkit/entity/CraftLivingEntity.java
-index 52834b6da..eeab59379 100644
 --- a/src/main/java/org/bukkit/craftbukkit/entity/CraftLivingEntity.java
 +++ b/src/main/java/org/bukkit/craftbukkit/entity/CraftLivingEntity.java
 @@ -171,6 +171,23 @@ public class CraftLivingEntity extends CraftEntity implements LivingEntity {

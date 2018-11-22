@@ -1,4 +1,3 @@
-From 8cfb250c7604959047200370c281919b0ae0c420 Mon Sep 17 00:00:00 2001
 From: AlphaBlend <whizkid3000@hotmail.com>
 Date: Sun, 16 Oct 2016 23:19:34 -0700
 Subject: [PATCH] Add EntityZapEvent
@@ -6,7 +5,6 @@ Subject: [PATCH] Add EntityZapEvent
 
 diff --git a/src/main/java/com/destroystokyo/paper/event/entity/EntityZapEvent.java b/src/main/java/com/destroystokyo/paper/event/entity/EntityZapEvent.java
 new file mode 100644
-index 00000000..0da89441
 --- /dev/null
 +++ b/src/main/java/com/destroystokyo/paper/event/entity/EntityZapEvent.java
 @@ -0,0 +1,63 @@
@@ -74,7 +72,6 @@ index 00000000..0da89441
 +    }
 +}
 diff --git a/src/main/java/org/bukkit/event/entity/PigZapEvent.java b/src/main/java/org/bukkit/event/entity/PigZapEvent.java
-index aa80ebf1..73844b8f 100644
 --- a/src/main/java/org/bukkit/event/entity/PigZapEvent.java
 +++ b/src/main/java/org/bukkit/event/entity/PigZapEvent.java
 @@ -1,5 +1,6 @@
@@ -119,5 +116,5 @@ index aa80ebf1..73844b8f 100644
 +    // Paper end
  }
 -- 
-2.18.0
+2.19.1
 

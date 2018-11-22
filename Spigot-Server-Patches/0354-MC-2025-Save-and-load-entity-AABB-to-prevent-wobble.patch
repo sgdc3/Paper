@@ -1,4 +1,3 @@
-From 7ac07ac07ac07ac07ac07ac07ac07ac07ac07ac0 Mon Sep 17 00:00:00 2001
 From: Zach Brown <zach.brown@destroystokyo.com>
 Date: Tue, 4 Sep 2018 19:07:57 -0400
 Subject: [PATCH] MC-2025: Save and load entity AABB to prevent wobble
@@ -23,7 +22,6 @@ This reasoning leads us to one clear conclusion: The simplest, least invasive, a
 store the AABB in NBT data on chunk save and restore the AABB exactly as it was saved upon reload.
 
 diff --git a/src/main/java/net/minecraft/server/AxisAlignedBB.java b/src/main/java/net/minecraft/server/AxisAlignedBB.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/AxisAlignedBB.java
 +++ b/src/main/java/net/minecraft/server/AxisAlignedBB.java
 @@ -3,12 +3,12 @@ package net.minecraft.server;
@@ -46,7 +44,6 @@ index 7ac07ac07ac0..7ac07ac07ac0 100644
      public AxisAlignedBB(double d0, double d1, double d2, double d3, double d4, double d5) {
          this.minX = Math.min(d0, d3);
 diff --git a/src/main/java/net/minecraft/server/Entity.java b/src/main/java/net/minecraft/server/Entity.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/Entity.java
 +++ b/src/main/java/net/minecraft/server/Entity.java
 @@ -1659,6 +1659,12 @@ public abstract class Entity implements INamableTileEntity, ICommandListener, Ke

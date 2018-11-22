@@ -1,4 +1,3 @@
-From 1e12dab0780ccc1ca6e689cff0c54010aab97f66 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Tue, 5 Jun 2018 23:00:29 -0400
 Subject: [PATCH] ItemStack#getMaxItemUseDuration
@@ -6,7 +5,6 @@ Subject: [PATCH] ItemStack#getMaxItemUseDuration
 Allows you to determine how long it takes to use a usable/consumable item
 
 diff --git a/src/main/java/net/minecraft/server/ItemStack.java b/src/main/java/net/minecraft/server/ItemStack.java
-index f71d9ee578..a238388012 100644
 --- a/src/main/java/net/minecraft/server/ItemStack.java
 +++ b/src/main/java/net/minecraft/server/ItemStack.java
 @@ -522,6 +522,7 @@ public final class ItemStack {
@@ -18,7 +16,6 @@ index f71d9ee578..a238388012 100644
          return this.getItem().c(this);
      }
 diff --git a/src/main/java/org/bukkit/craftbukkit/inventory/CraftItemStack.java b/src/main/java/org/bukkit/craftbukkit/inventory/CraftItemStack.java
-index e7daa95078..d6e6b9bed4 100644
 --- a/src/main/java/org/bukkit/craftbukkit/inventory/CraftItemStack.java
 +++ b/src/main/java/org/bukkit/craftbukkit/inventory/CraftItemStack.java
 @@ -183,6 +183,13 @@ public final class CraftItemStack extends ItemStack {
@@ -36,5 +33,5 @@ index e7daa95078..d6e6b9bed4 100644
      public void addUnsafeEnchantment(Enchantment ench, int level) {
          Validate.notNull(ench, "Cannot add null enchantment");
 -- 
-2.19.0
+2.19.1
 

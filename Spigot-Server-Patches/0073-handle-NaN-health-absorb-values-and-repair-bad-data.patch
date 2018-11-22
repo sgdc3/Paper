@@ -1,11 +1,9 @@
-From 0e5ec8f1cd5d4e55e15adbbea9140341efdb7e6f Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Sun, 27 Sep 2015 01:18:02 -0400
 Subject: [PATCH] handle NaN health/absorb values and repair bad data
 
 
 diff --git a/src/main/java/net/minecraft/server/EntityLiving.java b/src/main/java/net/minecraft/server/EntityLiving.java
-index c3936c4e36..d41a7fb087 100644
 --- a/src/main/java/net/minecraft/server/EntityLiving.java
 +++ b/src/main/java/net/minecraft/server/EntityLiving.java
 @@ -499,7 +499,13 @@ public abstract class EntityLiving extends Entity {
@@ -44,7 +42,6 @@ index c3936c4e36..d41a7fb087 100644
          }
  
 diff --git a/src/main/java/org/bukkit/craftbukkit/entity/CraftPlayer.java b/src/main/java/org/bukkit/craftbukkit/entity/CraftPlayer.java
-index 33bbda62f2..c575fb933c 100644
 --- a/src/main/java/org/bukkit/craftbukkit/entity/CraftPlayer.java
 +++ b/src/main/java/org/bukkit/craftbukkit/entity/CraftPlayer.java
 @@ -1563,6 +1563,7 @@ public class CraftPlayer extends CraftHumanEntity implements Player {
@@ -56,5 +53,5 @@ index 33bbda62f2..c575fb933c 100644
      }
  
 -- 
-2.19.0
+2.19.1
 

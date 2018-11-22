@@ -1,11 +1,9 @@
-From 00bb5cf018de0f3d75abc87b211b2f1b0401adaa Mon Sep 17 00:00:00 2001
 From: MiniDigger <admin@minidigger.me>
 Date: Sat, 10 Mar 2018 00:50:24 +0100
 Subject: [PATCH] Toggleable player crits, helps mitigate hacked clients.
 
 
 diff --git a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
-index 67b4d576a9..02c52958c8 100644
 --- a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 +++ b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 @@ -182,6 +182,11 @@ public class PaperWorldConfig {
@@ -21,7 +19,6 @@ index 67b4d576a9..02c52958c8 100644
      private void allChunksAreSlimeChunks() {
          allChunksAreSlimeChunks = getBoolean("all-chunks-are-slime-chunks", false);
 diff --git a/src/main/java/net/minecraft/server/EntityHuman.java b/src/main/java/net/minecraft/server/EntityHuman.java
-index b047e8e8b1..b9e6a18293 100644
 --- a/src/main/java/net/minecraft/server/EntityHuman.java
 +++ b/src/main/java/net/minecraft/server/EntityHuman.java
 @@ -1035,6 +1035,7 @@ public abstract class EntityHuman extends EntityLiving {

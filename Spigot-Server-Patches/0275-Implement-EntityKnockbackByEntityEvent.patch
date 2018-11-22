@@ -1,4 +1,3 @@
-From b664061d5a2f0735d9077636c959ecbda15c7795 Mon Sep 17 00:00:00 2001
 From: Brokkonaut <hannos17@gmx.de>
 Date: Mon, 18 Jun 2018 15:46:23 +0200
 Subject: [PATCH] Implement EntityKnockbackByEntityEvent
@@ -6,7 +5,6 @@ Subject: [PATCH] Implement EntityKnockbackByEntityEvent
 This event is called when an entity receives knockback by another entity.
 
 diff --git a/src/main/java/net/minecraft/server/EntityLiving.java b/src/main/java/net/minecraft/server/EntityLiving.java
-index 566f6e3a6a..a8f58a13fe 100644
 --- a/src/main/java/net/minecraft/server/EntityLiving.java
 +++ b/src/main/java/net/minecraft/server/EntityLiving.java
 @@ -1251,6 +1251,12 @@ public abstract class EntityLiving extends Entity {
@@ -42,5 +40,5 @@ index 566f6e3a6a..a8f58a13fe 100644
      }
  
 -- 
-2.19.0
+2.19.1
 

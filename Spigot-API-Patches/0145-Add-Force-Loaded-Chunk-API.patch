@@ -1,11 +1,9 @@
-From 14a1db13c30927e0e9b1b1b9540aab8f749b1df7 Mon Sep 17 00:00:00 2001
 From: willies952002 <admin@domnian.com>
 Date: Wed, 29 Aug 2018 00:37:30 -0400
 Subject: [PATCH] Add Force-Loaded Chunk API
 
 
 diff --git a/src/main/java/org/bukkit/Chunk.java b/src/main/java/org/bukkit/Chunk.java
-index 8a804335..4b9e0ca4 100644
 --- a/src/main/java/org/bukkit/Chunk.java
 +++ b/src/main/java/org/bukkit/Chunk.java
 @@ -168,4 +168,20 @@ public interface Chunk {
@@ -30,7 +28,6 @@ index 8a804335..4b9e0ca4 100644
 +    // Paper end
  }
 diff --git a/src/main/java/org/bukkit/World.java b/src/main/java/org/bukkit/World.java
-index de89122e..aa28c452 100644
 --- a/src/main/java/org/bukkit/World.java
 +++ b/src/main/java/org/bukkit/World.java
 @@ -195,6 +195,16 @@ public interface World extends PluginMessageRecipient, Metadatable {

@@ -1,11 +1,9 @@
-From 63f74cee412e46e59e862a07cffb35317117d9a2 Mon Sep 17 00:00:00 2001
 From: Sudzzy <originmc@outlook.com>
 Date: Wed, 2 Mar 2016 23:34:44 -0600
 Subject: [PATCH] Configurable container update tick rate
 
 
 diff --git a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
-index 40766d81c7..71af3fcfed 100644
 --- a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 +++ b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 @@ -170,4 +170,9 @@ public class PaperWorldConfig {
@@ -19,7 +17,6 @@ index 40766d81c7..71af3fcfed 100644
 +    }
  }
 diff --git a/src/main/java/net/minecraft/server/EntityPlayer.java b/src/main/java/net/minecraft/server/EntityPlayer.java
-index cdf89cfed3..1f98be261a 100644
 --- a/src/main/java/net/minecraft/server/EntityPlayer.java
 +++ b/src/main/java/net/minecraft/server/EntityPlayer.java
 @@ -71,6 +71,7 @@ public class EntityPlayer extends EntityHuman implements ICrafting {

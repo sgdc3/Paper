@@ -1,4 +1,3 @@
-From 77a78428fcc16fb82c0a2e0d2173db22a1476266 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Wed, 22 Jul 2015 18:50:41 -0400
 Subject: [PATCH] Add sender name to commands.yml replacement
@@ -7,7 +6,6 @@ This allows you to use $sender in commands.yml definitions to make
 commands that auto target self.
 
 diff --git a/src/main/java/org/bukkit/command/FormattedCommandAlias.java b/src/main/java/org/bukkit/command/FormattedCommandAlias.java
-index 9c80f464..631be1cb 100644
 --- a/src/main/java/org/bukkit/command/FormattedCommandAlias.java
 +++ b/src/main/java/org/bukkit/command/FormattedCommandAlias.java
 @@ -1,6 +1,9 @@
@@ -42,5 +40,5 @@ index 9c80f464..631be1cb 100644
          while (index != -1) {
              int start = index;
 -- 
-2.18.0
+2.19.1
 

@@ -1,4 +1,3 @@
-From 7ac07ac07ac07ac07ac07ac07ac07ac07ac07ac0 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Thu, 27 Aug 2015 01:15:02 -0400
 Subject: [PATCH] Optimize Chunk Access
@@ -9,7 +8,6 @@ getChunkAt is called for the same chunk multiple times in a row, often from getT
 Optimize this look up by using a Last Access cache.
 
 diff --git a/src/main/java/net/minecraft/server/ChunkMap.java b/src/main/java/net/minecraft/server/ChunkMap.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/ChunkMap.java
 +++ b/src/main/java/net/minecraft/server/ChunkMap.java
 @@ -15,6 +15,7 @@ public class ChunkMap extends Long2ObjectOpenHashMap<Chunk> {
@@ -71,7 +69,6 @@ index 7ac07ac07ac0..7ac07ac07ac0 100644
      public Chunk a(Object object) {
          return this.a(((Long) object).longValue());
 diff --git a/src/main/java/net/minecraft/server/ChunkProviderServer.java b/src/main/java/net/minecraft/server/ChunkProviderServer.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/ChunkProviderServer.java
 +++ b/src/main/java/net/minecraft/server/ChunkProviderServer.java
 @@ -78,15 +78,16 @@ public class ChunkProviderServer implements IChunkProvider {

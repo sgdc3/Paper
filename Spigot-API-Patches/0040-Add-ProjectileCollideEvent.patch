@@ -1,4 +1,3 @@
-From 4eac0975455ab0ef81f5dac6bf83d475951f9a81 Mon Sep 17 00:00:00 2001
 From: Techcable <Techcable@outlook.com>
 Date: Fri, 16 Dec 2016 21:25:39 -0600
 Subject: [PATCH] Add ProjectileCollideEvent
@@ -6,7 +5,6 @@ Subject: [PATCH] Add ProjectileCollideEvent
 
 diff --git a/src/main/java/com/destroystokyo/paper/event/entity/ProjectileCollideEvent.java b/src/main/java/com/destroystokyo/paper/event/entity/ProjectileCollideEvent.java
 new file mode 100644
-index 00000000..f42e9851
 --- /dev/null
 +++ b/src/main/java/com/destroystokyo/paper/event/entity/ProjectileCollideEvent.java
 @@ -0,0 +1,62 @@
@@ -73,5 +71,5 @@ index 00000000..f42e9851
 +    }
 +}
 -- 
-2.18.0
+2.19.1
 

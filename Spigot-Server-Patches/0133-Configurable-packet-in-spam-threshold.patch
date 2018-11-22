@@ -1,11 +1,9 @@
-From d84e0a561e044f2e4ad8586dca7ee49908015c80 Mon Sep 17 00:00:00 2001
 From: Zach Brown <zach.brown@destroystokyo.com>
 Date: Sun, 11 Sep 2016 14:30:57 -0500
 Subject: [PATCH] Configurable packet in spam threshold
 
 
 diff --git a/src/main/java/com/destroystokyo/paper/PaperConfig.java b/src/main/java/com/destroystokyo/paper/PaperConfig.java
-index 1c1ef2dc2..4c0a9f18c 100644
 --- a/src/main/java/com/destroystokyo/paper/PaperConfig.java
 +++ b/src/main/java/com/destroystokyo/paper/PaperConfig.java
 @@ -253,4 +253,13 @@ public class PaperConfig {
@@ -23,7 +21,6 @@ index 1c1ef2dc2..4c0a9f18c 100644
 +    }
  }
 diff --git a/src/main/java/net/minecraft/server/PlayerConnection.java b/src/main/java/net/minecraft/server/PlayerConnection.java
-index aad33272f..598b747ec 100644
 --- a/src/main/java/net/minecraft/server/PlayerConnection.java
 +++ b/src/main/java/net/minecraft/server/PlayerConnection.java
 @@ -1201,13 +1201,14 @@ public class PlayerConnection implements PacketListenerPlayIn, ITickable {

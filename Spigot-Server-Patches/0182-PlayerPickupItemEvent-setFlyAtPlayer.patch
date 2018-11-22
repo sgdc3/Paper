@@ -1,11 +1,9 @@
-From df7bf328a6c36551758f3a52f2ec36c3a380afb1 Mon Sep 17 00:00:00 2001
 From: BillyGalbreath <Blake.Galbreath@GMail.com>
 Date: Sun, 7 May 2017 06:26:09 -0500
 Subject: [PATCH] PlayerPickupItemEvent#setFlyAtPlayer
 
 
 diff --git a/src/main/java/net/minecraft/server/EntityItem.java b/src/main/java/net/minecraft/server/EntityItem.java
-index 3e70a06397..d9d52a63d8 100644
 --- a/src/main/java/net/minecraft/server/EntityItem.java
 +++ b/src/main/java/net/minecraft/server/EntityItem.java
 @@ -308,6 +308,7 @@ public class EntityItem extends Entity {
@@ -43,5 +41,5 @@ index 3e70a06397..d9d52a63d8 100644
                      this.die();
                      itemstack.setCount(i);
 -- 
-2.19.0
+2.19.1
 

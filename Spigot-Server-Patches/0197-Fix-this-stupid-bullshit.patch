@@ -1,4 +1,3 @@
-From 7ac07ac07ac07ac07ac07ac07ac07ac07ac07ac0 Mon Sep 17 00:00:00 2001
 From: DemonWav <demonwav@gmail.com>
 Date: Sun, 6 Aug 2017 17:17:53 -0500
 Subject: [PATCH] Fix this stupid bullshit
@@ -9,7 +8,6 @@ modified in order to prevent merge conflicts when Spigot changes/disables the wa
 and to provide some level of hint without being disruptive.
 
 diff --git a/src/main/java/org/bukkit/craftbukkit/Main.java b/src/main/java/org/bukkit/craftbukkit/Main.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/org/bukkit/craftbukkit/Main.java
 +++ b/src/main/java/org/bukkit/craftbukkit/Main.java
 @@ -217,10 +217,12 @@ public class Main {

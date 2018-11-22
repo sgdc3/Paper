@@ -1,11 +1,9 @@
-From 41ab545f015675893214f7a9d3649abbc8b78963 Mon Sep 17 00:00:00 2001
 From: DoctorDark <doctordark11@gmail.com>
 Date: Wed, 16 Mar 2016 02:21:39 -0500
 Subject: [PATCH] Configurable end credits
 
 
 diff --git a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
-index 8f6f0288be..5aee23dceb 100644
 --- a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 +++ b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 @@ -138,4 +138,10 @@ public class PaperWorldConfig {
@@ -20,7 +18,6 @@ index 8f6f0288be..5aee23dceb 100644
 +    }
  }
 diff --git a/src/main/java/net/minecraft/server/EntityPlayer.java b/src/main/java/net/minecraft/server/EntityPlayer.java
-index e0215bcdb8..cdf89cfed3 100644
 --- a/src/main/java/net/minecraft/server/EntityPlayer.java
 +++ b/src/main/java/net/minecraft/server/EntityPlayer.java
 @@ -61,7 +61,7 @@ public class EntityPlayer extends EntityHuman implements ICrafting {

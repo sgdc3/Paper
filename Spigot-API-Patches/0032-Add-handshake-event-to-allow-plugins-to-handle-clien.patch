@@ -1,4 +1,3 @@
-From 4e0abf8c461a8e517fa30a281d90f8c60bd5686a Mon Sep 17 00:00:00 2001
 From: kashike <kashike@vq.lc>
 Date: Wed, 13 Apr 2016 20:20:18 -0700
 Subject: [PATCH] Add handshake event to allow plugins to handle client
@@ -7,7 +6,6 @@ Subject: [PATCH] Add handshake event to allow plugins to handle client
 
 diff --git a/src/main/java/com/destroystokyo/paper/event/player/PlayerHandshakeEvent.java b/src/main/java/com/destroystokyo/paper/event/player/PlayerHandshakeEvent.java
 new file mode 100644
-index 00000000..e44d03a2
 --- /dev/null
 +++ b/src/main/java/com/destroystokyo/paper/event/player/PlayerHandshakeEvent.java
 @@ -0,0 +1,211 @@
@@ -223,5 +221,5 @@ index 00000000..e44d03a2
 +    }
 +}
 -- 
-2.18.0
+2.19.1
 

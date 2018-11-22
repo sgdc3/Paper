@@ -1,4 +1,3 @@
-From 662cf614a03e90feb9aaad1d22300aee82391b4c Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Mon, 28 Mar 2016 21:22:26 -0400
 Subject: [PATCH] EntityPathfindEvent
@@ -6,7 +5,6 @@ Subject: [PATCH] EntityPathfindEvent
 Fires when an Entity decides to start moving to a location.
 
 diff --git a/src/main/java/net/minecraft/server/NavigationAbstract.java b/src/main/java/net/minecraft/server/NavigationAbstract.java
-index 5d6f726d05..a8b070ed32 100644
 --- a/src/main/java/net/minecraft/server/NavigationAbstract.java
 +++ b/src/main/java/net/minecraft/server/NavigationAbstract.java
 @@ -3,7 +3,7 @@ package net.minecraft.server;
@@ -35,5 +33,5 @@ index 5d6f726d05..a8b070ed32 100644
                  float fx = this.j();
                  this.b.methodProfiler.a("pathfind");
 -- 
-2.19.0
+2.19.1
 

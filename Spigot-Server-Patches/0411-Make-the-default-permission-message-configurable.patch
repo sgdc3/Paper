@@ -1,11 +1,9 @@
-From 83381a58c6d6c970af932bbff81bd7fab6d6316b Mon Sep 17 00:00:00 2001
 From: Shane Freeder <theboyetronic@gmail.com>
 Date: Sun, 18 Nov 2018 19:49:56 +0000
 Subject: [PATCH] Make the default permission message configurable
 
 
 diff --git a/src/main/java/com/destroystokyo/paper/PaperConfig.java b/src/main/java/com/destroystokyo/paper/PaperConfig.java
-index beec4e33c6..579726bb59 100644
 --- a/src/main/java/com/destroystokyo/paper/PaperConfig.java
 +++ b/src/main/java/com/destroystokyo/paper/PaperConfig.java
 @@ -21,6 +21,7 @@ import java.util.regex.Pattern;
@@ -29,7 +27,6 @@ index beec4e33c6..579726bb59 100644
      private static void savePlayerData() {
          savePlayerData = getBoolean("settings.save-player-data", savePlayerData);
 diff --git a/src/main/java/org/bukkit/craftbukkit/CraftServer.java b/src/main/java/org/bukkit/craftbukkit/CraftServer.java
-index 648ac4d183..645953a310 100644
 --- a/src/main/java/org/bukkit/craftbukkit/CraftServer.java
 +++ b/src/main/java/org/bukkit/craftbukkit/CraftServer.java
 @@ -2146,6 +2146,10 @@ public final class CraftServer implements Server {

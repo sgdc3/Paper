@@ -1,11 +1,9 @@
-From 0337ec68f7397efe5c6599cb488ae42952f290a8 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Sat, 10 Mar 2018 16:33:15 -0500
 Subject: [PATCH] Prevent Frosted Ice from loading/holding chunks
 
 
 diff --git a/src/main/java/net/minecraft/server/BlockIceFrost.java b/src/main/java/net/minecraft/server/BlockIceFrost.java
-index 7bea86f52b..ea3a6f2fb1 100644
 --- a/src/main/java/net/minecraft/server/BlockIceFrost.java
 +++ b/src/main/java/net/minecraft/server/BlockIceFrost.java
 @@ -16,7 +16,8 @@ public class BlockIceFrost extends BlockIce {
@@ -28,5 +26,5 @@ index 7bea86f52b..ea3a6f2fb1 100644
                      if (j >= i) {
                          boolean flag = false;
 -- 
-2.19.0
+2.19.1
 

@@ -1,4 +1,3 @@
-From 7ac07ac07ac07ac07ac07ac07ac07ac07ac07ac0 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Fri, 28 Sep 2018 22:27:33 -0400
 Subject: [PATCH] Don't recheck type after setting a block
@@ -16,7 +15,6 @@ be having data corruption issues anyways.
 This provides a small boost to all setType calls.
 
 diff --git a/src/main/java/net/minecraft/server/Chunk.java b/src/main/java/net/minecraft/server/Chunk.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/Chunk.java
 +++ b/src/main/java/net/minecraft/server/Chunk.java
 @@ -553,7 +553,7 @@ public class Chunk implements IChunkAccess {

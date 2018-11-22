@@ -1,4 +1,3 @@
-From 7ac07ac07ac07ac07ac07ac07ac07ac07ac07ac0 Mon Sep 17 00:00:00 2001
 From: Byteflux <byte@byteflux.net>
 Date: Wed, 2 Mar 2016 11:59:48 -0600
 Subject: [PATCH] Optimize explosions
@@ -10,7 +9,6 @@ This patch adds a per-tick cache that is used for storing and retrieving
 an entity's exposure during an explosion.
 
 diff --git a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 +++ b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 @@ -144,4 +144,10 @@ public class PaperWorldConfig {
@@ -25,7 +23,6 @@ index 7ac07ac07ac0..7ac07ac07ac0 100644
 +    }
  }
 diff --git a/src/main/java/net/minecraft/server/Explosion.java b/src/main/java/net/minecraft/server/Explosion.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/Explosion.java
 +++ b/src/main/java/net/minecraft/server/Explosion.java
 @@ -137,7 +137,7 @@ public class Explosion {
@@ -124,7 +121,6 @@ index 7ac07ac07ac0..7ac07ac07ac0 100644
 +    // Paper end
  }
 diff --git a/src/main/java/net/minecraft/server/MinecraftServer.java b/src/main/java/net/minecraft/server/MinecraftServer.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/MinecraftServer.java
 +++ b/src/main/java/net/minecraft/server/MinecraftServer.java
 @@ -1059,6 +1059,7 @@ public abstract class MinecraftServer implements IAsyncTaskHandler, IMojangStati
@@ -136,7 +132,6 @@ index 7ac07ac07ac0..7ac07ac07ac0 100644
          }
  
 diff --git a/src/main/java/net/minecraft/server/World.java b/src/main/java/net/minecraft/server/World.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/World.java
 +++ b/src/main/java/net/minecraft/server/World.java
 @@ -24,6 +24,7 @@ import org.apache.logging.log4j.Logger;

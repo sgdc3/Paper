@@ -1,11 +1,9 @@
-From 36b4f942b750fbc28be7fa74ea33510ca56b7222 Mon Sep 17 00:00:00 2001
 From: vemacs <d@nkmem.es>
 Date: Wed, 23 Nov 2016 08:31:45 -0500
 Subject: [PATCH] Cache user authenticator threads
 
 
 diff --git a/src/main/java/net/minecraft/server/LoginListener.java b/src/main/java/net/minecraft/server/LoginListener.java
-index dea401c924..19ac21e385 100644
 --- a/src/main/java/net/minecraft/server/LoginListener.java
 +++ b/src/main/java/net/minecraft/server/LoginListener.java
 @@ -93,6 +93,12 @@ public class LoginListener implements PacketLoginInListener, ITickable {
@@ -66,5 +64,5 @@ index dea401c924..19ac21e385 100644
      }
  
 -- 
-2.19.0
+2.19.1
 

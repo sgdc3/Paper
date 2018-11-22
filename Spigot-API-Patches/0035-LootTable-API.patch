@@ -1,4 +1,3 @@
-From d1fe144a1457bb44d3e453bf5add1a93aea47d4a Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Sun, 1 May 2016 15:19:49 -0400
 Subject: [PATCH] LootTable API
@@ -12,7 +11,6 @@ Provides methods to determine players looted state for an object
 
 diff --git a/src/main/java/com/destroystokyo/paper/loottable/LootableBlockInventory.java b/src/main/java/com/destroystokyo/paper/loottable/LootableBlockInventory.java
 new file mode 100644
-index 000000000..9095df616
 --- /dev/null
 +++ b/src/main/java/com/destroystokyo/paper/loottable/LootableBlockInventory.java
 @@ -0,0 +1,15 @@
@@ -33,7 +31,6 @@ index 000000000..9095df616
 +}
 diff --git a/src/main/java/com/destroystokyo/paper/loottable/LootableEntityInventory.java b/src/main/java/com/destroystokyo/paper/loottable/LootableEntityInventory.java
 new file mode 100644
-index 000000000..a389f74c6
 --- /dev/null
 +++ b/src/main/java/com/destroystokyo/paper/loottable/LootableEntityInventory.java
 @@ -0,0 +1,15 @@
@@ -54,7 +51,6 @@ index 000000000..a389f74c6
 +}
 diff --git a/src/main/java/com/destroystokyo/paper/loottable/LootableInventory.java b/src/main/java/com/destroystokyo/paper/loottable/LootableInventory.java
 new file mode 100644
-index 000000000..2fc3e8a1c
 --- /dev/null
 +++ b/src/main/java/com/destroystokyo/paper/loottable/LootableInventory.java
 @@ -0,0 +1,112 @@
@@ -172,7 +168,6 @@ index 000000000..2fc3e8a1c
 +}
 diff --git a/src/main/java/com/destroystokyo/paper/loottable/LootableInventoryReplenishEvent.java b/src/main/java/com/destroystokyo/paper/loottable/LootableInventoryReplenishEvent.java
 new file mode 100644
-index 000000000..2169493d9
 --- /dev/null
 +++ b/src/main/java/com/destroystokyo/paper/loottable/LootableInventoryReplenishEvent.java
 @@ -0,0 +1,41 @@
@@ -218,7 +213,6 @@ index 000000000..2169493d9
 +    }
 +}
 diff --git a/src/main/java/org/bukkit/block/Chest.java b/src/main/java/org/bukkit/block/Chest.java
-index 815d79a53..b68ab881d 100644
 --- a/src/main/java/org/bukkit/block/Chest.java
 +++ b/src/main/java/org/bukkit/block/Chest.java
 @@ -1,5 +1,6 @@
@@ -238,7 +232,6 @@ index 815d79a53..b68ab881d 100644
      /**
       * Gets the inventory of the chest block represented by this block state.
 diff --git a/src/main/java/org/bukkit/block/Dispenser.java b/src/main/java/org/bukkit/block/Dispenser.java
-index 2741625db..6d180117e 100644
 --- a/src/main/java/org/bukkit/block/Dispenser.java
 +++ b/src/main/java/org/bukkit/block/Dispenser.java
 @@ -1,5 +1,6 @@
@@ -258,7 +251,6 @@ index 2741625db..6d180117e 100644
      /**
       * Gets the BlockProjectileSource object for the dispenser.
 diff --git a/src/main/java/org/bukkit/block/Dropper.java b/src/main/java/org/bukkit/block/Dropper.java
-index 2e8c3f711..47737b590 100644
 --- a/src/main/java/org/bukkit/block/Dropper.java
 +++ b/src/main/java/org/bukkit/block/Dropper.java
 @@ -1,12 +1,13 @@
@@ -277,7 +269,6 @@ index 2e8c3f711..47737b590 100644
      /**
       * Tries to drop a randomly selected item from the dropper's inventory,
 diff --git a/src/main/java/org/bukkit/block/Hopper.java b/src/main/java/org/bukkit/block/Hopper.java
-index 73fce5f33..221123e8c 100644
 --- a/src/main/java/org/bukkit/block/Hopper.java
 +++ b/src/main/java/org/bukkit/block/Hopper.java
 @@ -1,9 +1,10 @@
@@ -293,7 +284,6 @@ index 73fce5f33..221123e8c 100644
 -public interface Hopper extends Container, Nameable, Lootable { }
 +public interface Hopper extends Container, Nameable, LootableBlockInventory { } // Paper
 diff --git a/src/main/java/org/bukkit/block/ShulkerBox.java b/src/main/java/org/bukkit/block/ShulkerBox.java
-index 8e061e4a4..1c02c6e1c 100644
 --- a/src/main/java/org/bukkit/block/ShulkerBox.java
 +++ b/src/main/java/org/bukkit/block/ShulkerBox.java
 @@ -1,5 +1,6 @@
@@ -313,7 +303,6 @@ index 8e061e4a4..1c02c6e1c 100644
      /**
       * Get the {@link DyeColor} corresponding to this ShulkerBox
 diff --git a/src/main/java/org/bukkit/entity/minecart/HopperMinecart.java b/src/main/java/org/bukkit/entity/minecart/HopperMinecart.java
-index 8ced54039..865885501 100644
 --- a/src/main/java/org/bukkit/entity/minecart/HopperMinecart.java
 +++ b/src/main/java/org/bukkit/entity/minecart/HopperMinecart.java
 @@ -1,5 +1,6 @@
@@ -333,7 +322,6 @@ index 8ced54039..865885501 100644
      /**
       * Checks whether or not this Minecart will pick up 
 diff --git a/src/main/java/org/bukkit/entity/minecart/StorageMinecart.java b/src/main/java/org/bukkit/entity/minecart/StorageMinecart.java
-index 9ea403e6f..238d118f7 100644
 --- a/src/main/java/org/bukkit/entity/minecart/StorageMinecart.java
 +++ b/src/main/java/org/bukkit/entity/minecart/StorageMinecart.java
 @@ -1,5 +1,6 @@
@@ -351,7 +339,6 @@ index 9ea403e6f..238d118f7 100644
 +public interface StorageMinecart extends Minecart, InventoryHolder, LootableEntityInventory { // Paper
  }
 diff --git a/src/main/java/org/bukkit/loot/Lootable.java b/src/main/java/org/bukkit/loot/Lootable.java
-index f4b3d0215..9f1c830f4 100644
 --- a/src/main/java/org/bukkit/loot/Lootable.java
 +++ b/src/main/java/org/bukkit/loot/Lootable.java
 @@ -33,6 +33,34 @@ public interface Lootable {
@@ -390,5 +377,5 @@ index f4b3d0215..9f1c830f4 100644
       * Set the seed used when this Loot Table generates loot.
       *
 -- 
-2.18.0
+2.19.1
 

@@ -1,4 +1,3 @@
-From e1702becffffcfef95443310f01d1b93dcd5e38f Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Sat, 4 Aug 2018 19:37:35 -0400
 Subject: [PATCH] Provide Chunk Coordinates as a Long API
@@ -7,7 +6,6 @@ Allows you to easily access the chunks X/z as a long, and a method
 to look up by the long key too.
 
 diff --git a/src/main/java/org/bukkit/Chunk.java b/src/main/java/org/bukkit/Chunk.java
-index 079b9feb..b347a3cc 100644
 --- a/src/main/java/org/bukkit/Chunk.java
 +++ b/src/main/java/org/bukkit/Chunk.java
 @@ -23,6 +23,32 @@ public interface Chunk {
@@ -44,7 +42,6 @@ index 079b9feb..b347a3cc 100644
       * Gets the world containing this chunk
       *
 diff --git a/src/main/java/org/bukkit/World.java b/src/main/java/org/bukkit/World.java
-index 7c700cc2..00d72565 100644
 --- a/src/main/java/org/bukkit/World.java
 +++ b/src/main/java/org/bukkit/World.java
 @@ -139,6 +139,21 @@ public interface World extends PluginMessageRecipient, Metadatable {

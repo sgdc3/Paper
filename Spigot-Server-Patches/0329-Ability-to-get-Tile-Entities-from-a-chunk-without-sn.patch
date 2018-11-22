@@ -1,11 +1,9 @@
-From d1cb50480f7aad995cfc80a502340961c7e623f6 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Wed, 15 Aug 2018 01:16:34 -0400
 Subject: [PATCH] Ability to get Tile Entities from a chunk without snapshots
 
 
 diff --git a/src/main/java/org/bukkit/craftbukkit/CraftChunk.java b/src/main/java/org/bukkit/craftbukkit/CraftChunk.java
-index 76d395c4ed..12c6d850d2 100644
 --- a/src/main/java/org/bukkit/craftbukkit/CraftChunk.java
 +++ b/src/main/java/org/bukkit/craftbukkit/CraftChunk.java
 @@ -99,7 +99,12 @@ public class CraftChunk implements Chunk {
@@ -31,5 +29,5 @@ index 76d395c4ed..12c6d850d2 100644
  
          return entities;
 -- 
-2.19.0
+2.19.1
 

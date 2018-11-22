@@ -1,4 +1,3 @@
-From 7ac07ac07ac07ac07ac07ac07ac07ac07ac07ac0 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Sat, 21 Jul 2018 14:27:34 -0400
 Subject: [PATCH] Duplicate UUID Resolve Option
@@ -33,7 +32,6 @@ But for those who are ok with leaving this inconsistent behavior, you may use WA
 It is recommended you regenerate the entities, as these were legit entities, and deserve your love.
 
 diff --git a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 +++ b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 @@ -449,4 +449,43 @@ public class PaperWorldConfig {
@@ -81,7 +79,6 @@ index 7ac07ac07ac0..7ac07ac07ac0 100644
 +    }
  }
 diff --git a/src/main/java/net/minecraft/server/Chunk.java b/src/main/java/net/minecraft/server/Chunk.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/Chunk.java
 +++ b/src/main/java/net/minecraft/server/Chunk.java
 @@ -1,5 +1,10 @@
@@ -163,7 +160,6 @@ index 7ac07ac07ac0..7ac07ac07ac0 100644
              this.world.a(entityslice.stream().filter((entity) -> {
                  return !(entity instanceof EntityHuman);
 diff --git a/src/main/java/net/minecraft/server/Entity.java b/src/main/java/net/minecraft/server/Entity.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/Entity.java
 +++ b/src/main/java/net/minecraft/server/Entity.java
 @@ -2723,6 +2723,7 @@ public abstract class Entity implements INamableTileEntity, ICommandListener, Ke
@@ -175,7 +171,6 @@ index 7ac07ac07ac0..7ac07ac07ac0 100644
          this.uniqueID = uuid;
          this.au = this.uniqueID.toString();
 diff --git a/src/main/java/net/minecraft/server/World.java b/src/main/java/net/minecraft/server/World.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/World.java
 +++ b/src/main/java/net/minecraft/server/World.java
 @@ -75,7 +75,7 @@ public abstract class World implements IEntityAccess, GeneratorAccess, IIBlockAc
@@ -188,7 +183,6 @@ index 7ac07ac07ac0..7ac07ac07ac0 100644
      public final List<TileEntity> tileEntityListTick = Lists.newArrayList();
      private final List<TileEntity> c = Lists.newArrayList();
 diff --git a/src/main/java/net/minecraft/server/WorldServer.java b/src/main/java/net/minecraft/server/WorldServer.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/WorldServer.java
 +++ b/src/main/java/net/minecraft/server/WorldServer.java
 @@ -41,7 +41,7 @@ public class WorldServer extends World implements IAsyncTaskHandler {

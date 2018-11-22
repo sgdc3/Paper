@@ -1,4 +1,3 @@
-From 1bbdbfeadb10437782ff1ed24a4a09db0d8e52db Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Sun, 11 Mar 2018 14:13:33 -0400
 Subject: [PATCH] Disable Explicit Network Manager Flushing
@@ -12,7 +11,6 @@ flushing on the netty event loop, so it won't do the flush on the main thread.
 Renable flushing by passing -Dpaper.explicit-flush=true
 
 diff --git a/src/main/java/net/minecraft/server/NetworkManager.java b/src/main/java/net/minecraft/server/NetworkManager.java
-index 4f3f88ff66..f8facddb40 100644
 --- a/src/main/java/net/minecraft/server/NetworkManager.java
 +++ b/src/main/java/net/minecraft/server/NetworkManager.java
 @@ -66,6 +66,7 @@ public class NetworkManager extends SimpleChannelInboundHandler<Packet<?>> {
@@ -33,5 +31,5 @@ index 4f3f88ff66..f8facddb40 100644
  
          if (this.u++ % 20 == 0) {
 -- 
-2.19.0
+2.19.1
 

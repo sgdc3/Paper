@@ -1,11 +1,9 @@
-From f3634dbe784005f4a9ceef59cf1b6471979e9ecf Mon Sep 17 00:00:00 2001
 From: kashike <kashike@vq.lc>
 Date: Wed, 15 Aug 2018 01:26:09 -0700
 Subject: [PATCH] Allow disabling armour stand ticking
 
 
 diff --git a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
-index a2656abaf..95fc2d8ed 100644
 --- a/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 +++ b/src/main/java/com/destroystokyo/paper/PaperWorldConfig.java
 @@ -493,4 +493,10 @@ public class PaperWorldConfig {
@@ -20,7 +18,6 @@ index a2656abaf..95fc2d8ed 100644
 +    }
  }
 diff --git a/src/main/java/net/minecraft/server/EntityArmorStand.java b/src/main/java/net/minecraft/server/EntityArmorStand.java
-index 7647311df..d2b208888 100644
 --- a/src/main/java/net/minecraft/server/EntityArmorStand.java
 +++ b/src/main/java/net/minecraft/server/EntityArmorStand.java
 @@ -45,6 +45,11 @@ public class EntityArmorStand extends EntityLiving {
@@ -121,7 +118,6 @@ index 7647311df..d2b208888 100644
  
      public Vector3f r() {
 diff --git a/src/main/java/net/minecraft/server/EntityLiving.java b/src/main/java/net/minecraft/server/EntityLiving.java
-index a8103ff68..21d32178c 100644
 --- a/src/main/java/net/minecraft/server/EntityLiving.java
 +++ b/src/main/java/net/minecraft/server/EntityLiving.java
 @@ -2082,55 +2082,7 @@ public abstract class EntityLiving extends Entity {
@@ -239,7 +235,6 @@ index a8103ff68..21d32178c 100644
          float f2 = MathHelper.g(f - this.aQ);
  
 diff --git a/src/main/java/org/bukkit/craftbukkit/entity/CraftArmorStand.java b/src/main/java/org/bukkit/craftbukkit/entity/CraftArmorStand.java
-index 9f5c3b92e..07ce93f17 100644
 --- a/src/main/java/org/bukkit/craftbukkit/entity/CraftArmorStand.java
 +++ b/src/main/java/org/bukkit/craftbukkit/entity/CraftArmorStand.java
 @@ -297,5 +297,15 @@ public class CraftArmorStand extends CraftLivingEntity implements ArmorStand {

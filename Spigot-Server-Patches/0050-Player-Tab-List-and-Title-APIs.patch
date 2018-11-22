@@ -1,11 +1,9 @@
-From 25b13058491216858b504fb43d55fcd62df61a84 Mon Sep 17 00:00:00 2001
 From: Techcable <Techcable@outlook.com>
 Date: Thu, 3 Mar 2016 02:32:10 -0600
 Subject: [PATCH] Player Tab List and Title APIs
 
 
 diff --git a/src/main/java/net/minecraft/server/IChatBaseComponent.java b/src/main/java/net/minecraft/server/IChatBaseComponent.java
-index 286c1b14..ff14b3e0 100644
 --- a/src/main/java/net/minecraft/server/IChatBaseComponent.java
 +++ b/src/main/java/net/minecraft/server/IChatBaseComponent.java
 @@ -354,6 +354,7 @@ public interface IChatBaseComponent extends Message, Iterable<IChatBaseComponent
@@ -17,7 +15,6 @@ index 286c1b14..ff14b3e0 100644
          public static IChatBaseComponent a(String s) {
              return (IChatBaseComponent)ChatDeserializer.a(a, s, IChatBaseComponent.class, false);
 diff --git a/src/main/java/net/minecraft/server/PacketPlayOutTitle.java b/src/main/java/net/minecraft/server/PacketPlayOutTitle.java
-index 267b69de..29cbe15a 100644
 --- a/src/main/java/net/minecraft/server/PacketPlayOutTitle.java
 +++ b/src/main/java/net/minecraft/server/PacketPlayOutTitle.java
 @@ -12,6 +12,17 @@ public class PacketPlayOutTitle implements Packet<PacketListenerPlayOut> {
@@ -54,7 +51,6 @@ index 267b69de..29cbe15a 100644
  
          if (this.a == PacketPlayOutTitle.EnumTitleAction.TIMES) {
 diff --git a/src/main/java/org/bukkit/craftbukkit/entity/CraftPlayer.java b/src/main/java/org/bukkit/craftbukkit/entity/CraftPlayer.java
-index 2ab720d7..9e51bac8 100644
 --- a/src/main/java/org/bukkit/craftbukkit/entity/CraftPlayer.java
 +++ b/src/main/java/org/bukkit/craftbukkit/entity/CraftPlayer.java
 @@ -1,5 +1,6 @@
@@ -162,5 +158,5 @@ index 2ab720d7..9e51bac8 100644
      public String getDisplayName() {
          return getHandle().displayName;
 -- 
-2.19.0
+2.19.1
 

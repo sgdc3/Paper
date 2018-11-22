@@ -1,4 +1,3 @@
-From 01f61b9f5d052ed0b5129a941d189fafb8fefcf1 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Fri, 17 Jun 2016 20:50:11 -0400
 Subject: [PATCH] Fix Old Sign Conversion
@@ -9,7 +8,6 @@ Subject: [PATCH] Fix Old Sign Conversion
    This causes Igloos and such to render broken signs. We fix this by ignoring sign conversion for Defined Structures
 
 diff --git a/src/main/java/net/minecraft/server/DefinedStructure.java b/src/main/java/net/minecraft/server/DefinedStructure.java
-index 987d944dbd..5f6fb44ffa 100644
 --- a/src/main/java/net/minecraft/server/DefinedStructure.java
 +++ b/src/main/java/net/minecraft/server/DefinedStructure.java
 @@ -190,9 +190,11 @@ public class DefinedStructure {
@@ -25,7 +23,6 @@ index 987d944dbd..5f6fb44ffa 100644
                                  }
  
 diff --git a/src/main/java/net/minecraft/server/TileEntity.java b/src/main/java/net/minecraft/server/TileEntity.java
-index c5212417c6..b3c5766a27 100644
 --- a/src/main/java/net/minecraft/server/TileEntity.java
 +++ b/src/main/java/net/minecraft/server/TileEntity.java
 @@ -11,6 +11,7 @@ import org.bukkit.inventory.InventoryHolder; // CraftBukkit
@@ -37,7 +34,6 @@ index c5212417c6..b3c5766a27 100644
      private final TileEntityTypes<?> e; public TileEntityTypes getTileEntityType() { return e; } // Paper - OBFHELPER
      protected World world;
 diff --git a/src/main/java/net/minecraft/server/TileEntitySign.java b/src/main/java/net/minecraft/server/TileEntitySign.java
-index 00b6a3c16d..20dc3f272c 100644
 --- a/src/main/java/net/minecraft/server/TileEntitySign.java
 +++ b/src/main/java/net/minecraft/server/TileEntitySign.java
 @@ -50,13 +50,14 @@ public class TileEntitySign extends TileEntity implements ICommandListener {
@@ -58,5 +54,5 @@ index 00b6a3c16d..20dc3f272c 100644
                  if (this.world instanceof WorldServer) {
                      try {
 -- 
-2.19.0
+2.19.1
 

@@ -1,4 +1,3 @@
-From e76b659f5e22697dc759adffd8ed7d470cc020a2 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Thu, 13 Sep 2018 21:39:26 -0400
 Subject: [PATCH] Add ItemStackRecipeChoice Draft API
@@ -9,7 +8,6 @@ Allows creating recipes that must match isSimilar to full item stack.
 
 diff --git a/src/main/java/com/destroystokyo/paper/inventory/ItemStackRecipeChoice.java b/src/main/java/com/destroystokyo/paper/inventory/ItemStackRecipeChoice.java
 new file mode 100644
-index 000000000..43e6576b1
 --- /dev/null
 +++ b/src/main/java/com/destroystokyo/paper/inventory/ItemStackRecipeChoice.java
 @@ -0,0 +1,51 @@
@@ -65,5 +63,5 @@ index 000000000..43e6576b1
 +    }
 +}
 -- 
-2.19.0
+2.19.1
 

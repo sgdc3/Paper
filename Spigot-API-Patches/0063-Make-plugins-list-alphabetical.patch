@@ -1,11 +1,9 @@
-From 37638b5c57bc22517f707779b8c216d3cd24c131 Mon Sep 17 00:00:00 2001
 From: BillyGalbreath <Blake.Galbreath@GMail.com>
 Date: Mon, 31 Jul 2017 02:08:55 -0500
 Subject: [PATCH] Make /plugins list alphabetical
 
 
 diff --git a/src/main/java/org/bukkit/command/defaults/PluginsCommand.java b/src/main/java/org/bukkit/command/defaults/PluginsCommand.java
-index e40b03a7..b1d384e8 100644
 --- a/src/main/java/org/bukkit/command/defaults/PluginsCommand.java
 +++ b/src/main/java/org/bukkit/command/defaults/PluginsCommand.java
 @@ -3,6 +3,8 @@ package org.bukkit.command.defaults;
@@ -50,5 +48,5 @@ index e40b03a7..b1d384e8 100644
      }
  }
 -- 
-2.18.0
+2.19.1
 

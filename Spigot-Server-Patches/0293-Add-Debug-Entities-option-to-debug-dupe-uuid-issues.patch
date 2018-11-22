@@ -1,4 +1,3 @@
-From 23a899902be4cf2fe569776330edac2e5dd52740 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Sat, 21 Jul 2018 08:25:40 -0400
 Subject: [PATCH] Add Debug Entities option to debug dupe uuid issues
@@ -6,7 +5,6 @@ Subject: [PATCH] Add Debug Entities option to debug dupe uuid issues
 Add -Ddebug.entities=true to your JVM flags to gain more information
 
 diff --git a/src/main/java/net/minecraft/server/Entity.java b/src/main/java/net/minecraft/server/Entity.java
-index 42c1c47c58..3606c78843 100644
 --- a/src/main/java/net/minecraft/server/Entity.java
 +++ b/src/main/java/net/minecraft/server/Entity.java
 @@ -73,6 +73,7 @@ public abstract class Entity implements INamableTileEntity, ICommandListener, Ke
@@ -18,7 +16,6 @@ index 42c1c47c58..3606c78843 100644
          if (bukkitEntity == null) {
              bukkitEntity = CraftEntity.getEntity(world.getServer(), this);
 diff --git a/src/main/java/net/minecraft/server/World.java b/src/main/java/net/minecraft/server/World.java
-index ee2cdb897c..a341f5de9a 100644
 --- a/src/main/java/net/minecraft/server/World.java
 +++ b/src/main/java/net/minecraft/server/World.java
 @@ -115,6 +115,7 @@ public abstract class World implements IEntityAccess, GeneratorAccess, IIBlockAc
@@ -30,7 +27,6 @@ index ee2cdb897c..a341f5de9a 100644
      public boolean captureBlockStates = false;
      public boolean captureTreeGeneration = false;
 diff --git a/src/main/java/net/minecraft/server/WorldServer.java b/src/main/java/net/minecraft/server/WorldServer.java
-index 27278078e4..7eab55e7c1 100644
 --- a/src/main/java/net/minecraft/server/WorldServer.java
 +++ b/src/main/java/net/minecraft/server/WorldServer.java
 @@ -55,6 +55,9 @@ public class WorldServer extends World implements IAsyncTaskHandler {
@@ -103,5 +99,5 @@ index 27278078e4..7eab55e7c1 100644
  
          if (aentity != null) {
 -- 
-2.19.0
+2.19.1
 

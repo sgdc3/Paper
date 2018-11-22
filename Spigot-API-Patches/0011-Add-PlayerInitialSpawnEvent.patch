@@ -1,4 +1,3 @@
-From facd6dc1bbfc8a8f13398666f37d86892ce761cc Mon Sep 17 00:00:00 2001
 From: Steve Anton <anxuiz.nx@gmail.com>
 Date: Mon, 29 Feb 2016 18:13:58 -0600
 Subject: [PATCH] Add PlayerInitialSpawnEvent
@@ -7,7 +6,6 @@ For modifying a player's initial spawn location as they join the server
 
 diff --git a/src/main/java/com/destroystokyo/paper/event/player/PlayerInitialSpawnEvent.java b/src/main/java/com/destroystokyo/paper/event/player/PlayerInitialSpawnEvent.java
 new file mode 100644
-index 00000000..d1d6f33c
 --- /dev/null
 +++ b/src/main/java/com/destroystokyo/paper/event/player/PlayerInitialSpawnEvent.java
 @@ -0,0 +1,43 @@
@@ -55,5 +53,5 @@ index 00000000..d1d6f33c
 +    }
 +}
 -- 
-2.18.0
+2.19.1
 

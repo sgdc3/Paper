@@ -1,4 +1,3 @@
-From 7ac07ac07ac07ac07ac07ac07ac07ac07ac07ac0 Mon Sep 17 00:00:00 2001
 From: miclebrick <miclebrick@outlook.com>
 Date: Wed, 8 Aug 2018 15:30:52 -0400
 Subject: [PATCH] Add Early Warning Feature to WatchDog
@@ -9,7 +8,6 @@ thread dumps at an interval until the point of crash.
 This will help diagnose what was going on in that time before the crash.
 
 diff --git a/src/main/java/com/destroystokyo/paper/PaperConfig.java b/src/main/java/com/destroystokyo/paper/PaperConfig.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/com/destroystokyo/paper/PaperConfig.java
 +++ b/src/main/java/com/destroystokyo/paper/PaperConfig.java
 @@ -25,6 +25,7 @@ import org.bukkit.configuration.file.YamlConfiguration;
@@ -36,7 +34,6 @@ index 7ac07ac07ac0..7ac07ac07ac0 100644
      public static int tabSpamLimit = 500;
      private static void tabSpamLimiters() {
 diff --git a/src/main/java/net/minecraft/server/MinecraftServer.java b/src/main/java/net/minecraft/server/MinecraftServer.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/MinecraftServer.java
 +++ b/src/main/java/net/minecraft/server/MinecraftServer.java
 @@ -796,6 +796,7 @@ public abstract class MinecraftServer implements IAsyncTaskHandler, IMojangStati
@@ -48,7 +45,6 @@ index 7ac07ac07ac0..7ac07ac07ac0 100644
                  long start = System.nanoTime(), curTime, wait, tickSection = start; // Paper - Further improve server tick loop
                  lastTick = start - TICK_TIME; // Paper
 diff --git a/src/main/java/org/spigotmc/SpigotConfig.java b/src/main/java/org/spigotmc/SpigotConfig.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/org/spigotmc/SpigotConfig.java
 +++ b/src/main/java/org/spigotmc/SpigotConfig.java
 @@ -226,7 +226,7 @@ public class SpigotConfig
@@ -61,7 +57,6 @@ index 7ac07ac07ac0..7ac07ac07ac0 100644
  
      public static boolean bungee;
 diff --git a/src/main/java/org/spigotmc/WatchdogThread.java b/src/main/java/org/spigotmc/WatchdogThread.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/org/spigotmc/WatchdogThread.java
 +++ b/src/main/java/org/spigotmc/WatchdogThread.java
 @@ -5,6 +5,7 @@ import java.lang.management.MonitorInfo;

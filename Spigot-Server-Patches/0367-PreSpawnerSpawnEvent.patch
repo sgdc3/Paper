@@ -1,4 +1,3 @@
-From 7ac07ac07ac07ac07ac07ac07ac07ac07ac07ac0 Mon Sep 17 00:00:00 2001
 From: Phoenix616 <mail@moep.tv>
 Date: Tue, 18 Sep 2018 23:53:23 +0100
 Subject: [PATCH] PreSpawnerSpawnEvent
@@ -9,7 +8,6 @@ SpawnerSpawnEvent gets called instead of the CreatureSpawnEvent for
 spawners.
 
 diff --git a/src/main/java/net/minecraft/server/MobSpawnerAbstract.java b/src/main/java/net/minecraft/server/MobSpawnerAbstract.java
-index 7ac07ac07ac0..7ac07ac07ac0 100644
 --- a/src/main/java/net/minecraft/server/MobSpawnerAbstract.java
 +++ b/src/main/java/net/minecraft/server/MobSpawnerAbstract.java
 @@ -102,11 +102,11 @@ public abstract class MobSpawnerAbstract {

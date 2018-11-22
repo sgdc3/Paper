@@ -1,4 +1,3 @@
-From aac7b934c6ba1da1ee67804cca10f524efe67535 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Mon, 30 Apr 2018 13:15:55 -0400
 Subject: [PATCH] EndermanEscapeEvent
@@ -8,7 +7,6 @@ Fires an event anytime an enderman intends to teleport away from the player
 You may cancel this, enabling ranged attacks to damage the enderman for example.
 
 diff --git a/src/main/java/net/minecraft/server/EntityEnderman.java b/src/main/java/net/minecraft/server/EntityEnderman.java
-index 53a3819ee4..6abe45fd6f 100644
 --- a/src/main/java/net/minecraft/server/EntityEnderman.java
 +++ b/src/main/java/net/minecraft/server/EntityEnderman.java
 @@ -1,6 +1,7 @@
@@ -78,5 +76,5 @@ index 53a3819ee4..6abe45fd6f 100644
                          }
  
 -- 
-2.19.0
+2.19.1
 

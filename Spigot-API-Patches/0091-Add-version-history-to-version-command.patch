@@ -1,4 +1,3 @@
-From 34043f0447c8342e21d4a3e64a0991a7cb00a46c Mon Sep 17 00:00:00 2001
 From: Kyle Wood <demonwav@gmail.com>
 Date: Thu, 1 Mar 2018 19:37:52 -0600
 Subject: [PATCH] Add version history to version command
@@ -6,7 +5,6 @@ Subject: [PATCH] Add version history to version command
 
 diff --git a/src/main/java/com/destroystokyo/paper/VersionHistoryManager.java b/src/main/java/com/destroystokyo/paper/VersionHistoryManager.java
 new file mode 100644
-index 000000000..1daaca2fd
 --- /dev/null
 +++ b/src/main/java/com/destroystokyo/paper/VersionHistoryManager.java
 @@ -0,0 +1,143 @@
@@ -154,7 +152,6 @@ index 000000000..1daaca2fd
 +    }
 +}
 diff --git a/src/main/java/org/bukkit/command/defaults/VersionCommand.java b/src/main/java/org/bukkit/command/defaults/VersionCommand.java
-index f38f68640..5cebb2454 100644
 --- a/src/main/java/org/bukkit/command/defaults/VersionCommand.java
 +++ b/src/main/java/org/bukkit/command/defaults/VersionCommand.java
 @@ -29,6 +29,7 @@ import org.json.simple.parser.ParseException;

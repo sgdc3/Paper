@@ -1,4 +1,3 @@
-From c2e105f84b7417ae201d9c23ccc2b819aa0dfa48 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Sun, 14 Jan 2018 17:36:02 -0500
 Subject: [PATCH] PlayerNaturallySpawnCreaturesEvent
@@ -9,7 +8,6 @@ from triggering monster spawns on a server.
 Also a highly more effecient way to blanket block spawns in a world
 
 diff --git a/src/main/java/net/minecraft/server/SpawnerCreature.java b/src/main/java/net/minecraft/server/SpawnerCreature.java
-index 3f6bcbbd76..95d98b65cf 100644
 --- a/src/main/java/net/minecraft/server/SpawnerCreature.java
 +++ b/src/main/java/net/minecraft/server/SpawnerCreature.java
 @@ -47,6 +47,15 @@ public final class SpawnerCreature {
@@ -29,5 +27,5 @@ index 3f6bcbbd76..95d98b65cf 100644
                      for (int i1 = -b0; i1 <= b0; ++i1) {
                          for (k = -b0; k <= b0; ++k) {
 -- 
-2.19.0
+2.19.1
 

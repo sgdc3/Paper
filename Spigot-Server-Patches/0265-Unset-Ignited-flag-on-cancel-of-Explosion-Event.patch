@@ -1,4 +1,3 @@
-From 73594e284d277127349fb5fa7cd857bffcd68974 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Sun, 10 Jun 2018 01:18:49 -0400
 Subject: [PATCH] Unset Ignited flag on cancel of Explosion Event
@@ -6,7 +5,6 @@ Subject: [PATCH] Unset Ignited flag on cancel of Explosion Event
 Otherwise the creeper infinite explodes
 
 diff --git a/src/main/java/net/minecraft/server/EntityCreeper.java b/src/main/java/net/minecraft/server/EntityCreeper.java
-index 765123e3d2..19022b6e24 100644
 --- a/src/main/java/net/minecraft/server/EntityCreeper.java
 +++ b/src/main/java/net/minecraft/server/EntityCreeper.java
 @@ -12,7 +12,7 @@ public class EntityCreeper extends EntityMonster {
@@ -27,5 +25,5 @@ index 765123e3d2..19022b6e24 100644
              // CraftBukkit end
          }
 -- 
-2.19.0
+2.19.1
 

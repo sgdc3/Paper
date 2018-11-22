@@ -1,4 +1,3 @@
-From f8d4bb2005c7020b83b96410fc20803a644a6c3a Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Sat, 28 Apr 2018 10:28:50 -0400
 Subject: [PATCH] Add Ban Methods to Player Objects
@@ -8,7 +7,6 @@ Allows a more logical API for banning players.
 player.banPlayer("Breaking the rules");
 
 diff --git a/src/main/java/org/bukkit/OfflinePlayer.java b/src/main/java/org/bukkit/OfflinePlayer.java
-index d82790717..658eac264 100644
 --- a/src/main/java/org/bukkit/OfflinePlayer.java
 +++ b/src/main/java/org/bukkit/OfflinePlayer.java
 @@ -39,6 +39,56 @@ public interface OfflinePlayer extends ServerOperator, AnimalTamer, Configuratio
@@ -69,7 +67,6 @@ index d82790717..658eac264 100644
      /**
       * Checks if this player is whitelisted or not
 diff --git a/src/main/java/org/bukkit/entity/Player.java b/src/main/java/org/bukkit/entity/Player.java
-index 6f87abb91..bd8f8ff10 100644
 --- a/src/main/java/org/bukkit/entity/Player.java
 +++ b/src/main/java/org/bukkit/entity/Player.java
 @@ -1,10 +1,14 @@

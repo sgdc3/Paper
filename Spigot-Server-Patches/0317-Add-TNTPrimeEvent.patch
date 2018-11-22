@@ -1,11 +1,9 @@
-From b9694859d9ab9153646c1652af936a96459a786b Mon Sep 17 00:00:00 2001
 From: Mark Vainomaa <mikroskeem@mikroskeem.eu>
 Date: Mon, 16 Jul 2018 00:05:05 +0300
 Subject: [PATCH] Add TNTPrimeEvent
 
 
 diff --git a/src/main/java/net/minecraft/server/BlockFire.java b/src/main/java/net/minecraft/server/BlockFire.java
-index 24573b4704..ea428e2daf 100644
 --- a/src/main/java/net/minecraft/server/BlockFire.java
 +++ b/src/main/java/net/minecraft/server/BlockFire.java
 @@ -2,6 +2,7 @@ package net.minecraft.server;
@@ -38,7 +36,6 @@ index 24573b4704..ea428e2daf 100644
              }
          }
 diff --git a/src/main/java/net/minecraft/server/BlockTNT.java b/src/main/java/net/minecraft/server/BlockTNT.java
-index 81c5b60ea1..5fddb29612 100644
 --- a/src/main/java/net/minecraft/server/BlockTNT.java
 +++ b/src/main/java/net/minecraft/server/BlockTNT.java
 @@ -1,6 +1,7 @@
@@ -112,7 +109,6 @@ index 81c5b60ea1..5fddb29612 100644
                  world.setAir(blockposition);
              }
 diff --git a/src/main/java/net/minecraft/server/EntityEnderDragon.java b/src/main/java/net/minecraft/server/EntityEnderDragon.java
-index 2c735a920d..74d96a2f09 100644
 --- a/src/main/java/net/minecraft/server/EntityEnderDragon.java
 +++ b/src/main/java/net/minecraft/server/EntityEnderDragon.java
 @@ -9,6 +9,7 @@ import org.apache.logging.log4j.Logger;
@@ -136,5 +132,5 @@ index 2c735a920d..74d96a2f09 100644
  
                  this.world.setAir(new BlockPosition(blockX, blockY, blockZ));
 -- 
-2.19.0
+2.19.1
 
