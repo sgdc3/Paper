@@ -1,0 +1,38 @@
+From 41f310305737e6f9fbb17cc824f11d2f31bb0e22 Mon Sep 17 00:00:00 2001
+From: Gabriele C <sgdc3.mail@gmail.com>
+Date: Sun, 6 Jan 2019 17:48:45 +0100
+Subject: [PATCH] Add PistonPostExtendEvent
+
+This event is invoked when a piston has extended.
+
+diff --git a/src/main/java/net/minecraft/server/BlockPiston.java b/src/main/java/net/minecraft/server/BlockPiston.java
+index 0f90172f..c56a287d 100644
+--- a/src/main/java/net/minecraft/server/BlockPiston.java
++++ b/src/main/java/net/minecraft/server/BlockPiston.java
+@@ -394,6 +394,23 @@ public class BlockPiston extends BlockDirectional {
+                 world.applyPhysics(blockposition3, Blocks.PISTON_HEAD, false);
+             }
+ 
++            // Paper start - Add PistonPostExtendEvent
++            org.bukkit.block.BlockFace facing = CraftBlock.notchToBlockFace(enumdirection1);
++            List<org.bukkit.block.Block> destinationBlocks = new AbstractList<org.bukkit.block.Block>() {
++
++                @Override
++                public int size() {
++                    return blocks.size();
++                }
++
++                @Override
++                public org.bukkit.block.Block get(int index) {
++                    return blocks.get(index).getRelative(facing);
++                }
++            };
++            new com.destroystokyo.paper.event.block.PistonPostExtendEvent(bblock, destinationBlocks, facing).callEvent();
++            // Paper end
++
+             return true;
+         }
+     }
+-- 
+2.20.1
+

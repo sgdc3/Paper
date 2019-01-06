@@ -1,0 +1,77 @@
+From 005635c08192bd91c057f8d2ca11f7deb436ee2f Mon Sep 17 00:00:00 2001
+From: Gabriele C <sgdc3.mail@gmail.com>
+Date: Sun, 6 Jan 2019 17:47:08 +0100
+Subject: [PATCH] Add PistonPostExtendEvent
+
+This event is invoked when a piston has extended.
+
+diff --git a/src/main/java/com/destroystokyo/paper/event/block/PistonPostExtendEvent.java b/src/main/java/com/destroystokyo/paper/event/block/PistonPostExtendEvent.java
+new file mode 100644
+index 00000000..dd12084e
+--- /dev/null
++++ b/src/main/java/com/destroystokyo/paper/event/block/PistonPostExtendEvent.java
+@@ -0,0 +1,61 @@
++package com.destroystokyo.paper.event.block;
++
++import org.bukkit.Material;
++import org.bukkit.block.Block;
++import org.bukkit.block.BlockFace;
++import org.bukkit.event.HandlerList;
++import org.bukkit.event.block.BlockEvent;
++
++import java.util.List;
++
++/**
++ * Called when a piston has extended.
++ */
++public class PistonPostExtendEvent extends BlockEvent {
++    private static final HandlerList handlers = new HandlerList();
++    private final BlockFace direction;
++    private final List<Block> blocks;
++
++    public PistonPostExtendEvent(final Block block, final List<Block> blocks, final BlockFace direction) {
++        super(block);
++        this.direction = direction;
++        this.blocks = blocks;
++    }
++
++    /**
++     * Returns true if the Piston in the event is sticky.
++     *
++     * @return stickiness of the piston
++     */
++    public boolean isSticky() {
++        return block.getType() == Material.PISTON_STICKY_BASE || block.getType() == Material.PISTON_MOVING_PIECE;
++    }
++
++    /**
++     * Return the direction in which the piston operates.
++     *
++     * @return direction of the piston
++     */
++    public BlockFace getDirection() {
++        return direction;
++    }
++
++    /**
++     * Get an immutable list of the blocks which have been moved by the
++     * extending.
++     *
++     * @return Immutable list of the moved blocks.
++     */
++    public List<Block> getBlocks() {
++        return blocks;
++    }
++
++    @Override
++    public HandlerList getHandlers() {
++        return handlers;
++    }
++
++    public static HandlerList getHandlerList() {
++        return handlers;
++    }
++}
+-- 
+2.20.1
+
